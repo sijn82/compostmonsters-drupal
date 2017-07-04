@@ -1,0 +1,5 @@
+name = Monsters
+description = A database of monsters.
+core = 7.x
+version = 7.x-0.1-dev
+configure = admin/config/monsters/manage

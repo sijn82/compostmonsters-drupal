@@ -1,0 +1,186 @@
+<?php
+/**
+* @file
+*
+* Custom functionality for the monsters database.
+*/
+
+/**
+*
+* Implements hook_help().
+*/
+
+function monsters_help($path, $arg) {
+	switch ($path) {
+		case 'admin/help#monsters': {
+			$ret_val = '<h3>' . t('About') . '</h3>';
+			$ret_val .= '<p>' . t('The Monsters module makes it easier to manage a database of hideous monsters.') . '</p>';
+			return $ret_val;
+			break;
+		}
+	}
+}
+
+/**
+* Implements hook_permission().
+*/
+
+ function monsters_permission() {
+ 	return array(
+ 		'administer monsters' => array(
+ 			'title' => t('Administer Monsters'),
+ 			'description' => t('Perform administrative tasks on Monsters functionality'),
+ 		),
+ 	);
+ };
+
+ /**
+ * Implements hook_menu().
+ */
+
+ function monsters_menu() {
+ 	$items = array();
+
+ 	//Admin configuration group.
+ 	$items['admin/config/monsters'] = array(
+ 		'title' => 'Monsters',
+ 		'description' => 'Administer Monsters',
+ 		'access arguments' => array('administer monsters'),
+ 		);
+
+ 	//Admin configuration - Settings.
+
+ 	$items['admin/config/monsters/manage'] = array(
+ 		'title' => 'Monster Settings',
+ 		'description' => 'Manage Monster settings and configurations.',
+ 		'access arguments' => array('administer monsters'),
+ 		'page callback' => 'drupal_get_form',
+ 		'page arguments' => array('monsters_admin_settings_form'),
+ 		);
+
+ 	return $items;
+
+ };
+
+ 	/**
+ 	* Implements hook_form().
+ 	*/
+
+function monsters_admin_settings_form($node, &$form_state) {
+ 	$form = array();
+
+ 	$form['overview'] = array(
+ 			'#markup' => t('This interface allows administrators to manage general Monster Settings'),
+ 			'#prefix' => '<p>',
+ 			'#suffix' => '</p>',
+ 	);
+
+ 	$form['monsters_gmap'] = array(
+ 			'#title' => t('Enable Google Maps'),
+ 			'#description' => t('When enabled, Google Maps will be rendered if latitiude and longitude are known.'),
+ 			'#type' => 'checkbox',
+ 			'#default_value' => variable_get('monsters_gmap'),
+ 	);
+
+ 	$form['default_centre'] = array(
+ 			'#title' => t('Map Centre'),
+ 			'#description' => t('Location of the centre of the map of Monsters'),
+ 			'#type' => 'fieldset',
+ 			'#collapsible' => TRUE,
+ 			'#collapsed' => FALSE,
+ 	);
+
+ 	$form['default_centre']['monsters_default_centre_lat'] = array(
+ 			'#title' => t('Latitude'),
+ 			'#description' => t('Signed degrees format (DDD.dddd)'),
+ 			'#type' => 'textfield',
+ 			'#default_value' => variable_get('monsters_default_centre_lat'),
+ 			'#required' => TRUE,
+ 	);
+
+ 	$form['default_centre']['monsters_default_centre_long'] = array(
+ 			'#title' => t('Longitude'),
+ 			'#description' => t('Signed degrees format (DDD.dddd)'),
+ 			'#type' => 'textfield',
+ 			'#default_value' => variable_get('monsters_default_centre_long'),
+ 			'#required' => TRUE,
+ 	);
+
+ 	$options = range(0, 20, 1);
+ 	$options[0] = t('0 - Furthest');
+ 	$options[20] = t('20 - Closest');
+
+ 	$form['monsters_default_gmap_zoom'] = array(
+ 		 	'#title' => t('Google Map Zoom'),
+ 		 	'#description' => t('Default level of zoom, between 0 and 20.'),
+ 		 	'#type' => 'select',
+ 		 	'#options' => $options,
+ 		 	'#default_value' => variable_get('monsters_default_gmap_zoom'),
+ 		 	'#required' => TRUE,
+ 	);
+/**
+
+* Used as part of the long way round, subsequently removed but left here for educational purposes.
+
+ 	$form['submit'] = array(
+ 		 	'#type' => 'submit',
+ 		 	'#value' => t('Save'),
+ 	);
+
+ 		return $form;
+**/
+
+		return system_settings_form($form);
+ 		
+}
+
+ 	/**
+ 	* Validates Monsters admin settings.
+ 	*/
+
+function monsters_admin_settings_form_validate($form, &$form_state) {
+
+	// Regular expression for validating signed degrees.
+	$signed_degree_regex = '/^[+-]?\d+(\.\d+)?$/';
+
+	// Shorthand for long array values.
+	$lat = $form_state['values']['monsters_default_centre_lat'];
+	$long = $form_state['values']['monsters_default_centre_long'];
+
+	// Validate latitude and longitude format.
+	if (!preg_match($signed_degree_regex, $lat)) {
+		form_set_error('monsters_default_centre_lat', t('Invalid latitude; must be a signed degree (DDD.dddd).'));
+	}
+	if (!preg_match($signed_degree_regex, $long)) {
+		form_set_error('monsters_default_centre_long', t('Invalid longitude; must be a signed degree (DDD.dddd).'));
+	}
+
+	// Validate latitude and longitude values.
+	if (!((-180 <= $lat) && ($lat <= 180))) {
+		form_set_error('monsters_default_centre_lat', t('Latitude must be between -180 and 180'));
+	}
+	if (!((-180 <= $long) && ($long <= 180))) {
+		form_set_error('monsters_default_centre_long', t('Longitude must be between -180 and 180'));
+	}
+}
+
+/**
+* Process a validated Monsters admin setting submission. - The long way round, for educational purposes only.
+*/
+
+/**
+function monsters_admin_settings_form_submit($form, &$form_state) {
+	// Rebuild the form.
+	$form_state['rebuild'] = TRUE;
+
+	// Save Monsters setting variables.
+	variable_set('monsters_gmap', $form_state['values']['monsters_gmap']);
+	variable_set('monsters_default_centre_lat', $form_state['values']['monsters_default_centre_lat']);
+	variable_set('monsters_default_centre_long', $form_state['values']['monsters_default_centre_long']);
+	variable_set('monsters_default_gmap_zoom', $form_state['values']['monsters_default_gmap_zoom']);
+
+	// Notify user.
+
+	drupal_set_message(t('Monsters settings saved.'));
+}
+**/
