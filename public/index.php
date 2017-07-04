@@ -16,11 +16,11 @@
  */
 define('DRUPAL_ROOT', getcwd());
 
-echo('hello world');
-$a = 'cabbage';
-$b = 'white';
-$c = $a . " " . $b;
-echo($c);
+//echo('hello world');
+//$a = 'cabbage';
+//$b = 'white';
+//$c = $a . " " . $b;
+//echo($c);
 
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
