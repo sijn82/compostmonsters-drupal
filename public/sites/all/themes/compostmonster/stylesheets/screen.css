@@ -1,0 +1,154 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../sass/_default-variables.scss */
+body {
+  background-color: #fff;
+}
+
+/* line 7, ../sass/_default-variables.scss */
+.navbar {
+  margin-bottom: 0px;
+  border-width: 0px 0px 3px 0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #430517;
+}
+
+/* line 17, ../sass/_default-variables.scss */
+button.navbar-toggle {
+  margin-right: 30px;
+}
+
+/* line 21, ../sass/_default-variables.scss */
+a.name.navbar-brand {
+  background-color: #430517;
+  color: #45b52a;
+  font-family: "Mystery Quest";
+  padding-left: 15px;
+  margin-left: 0px;
+  /*border-top-left-radius: 4px;*/
+}
+
+/* line 30, ../sass/_default-variables.scss */
+h1.page-header {
+  display: none;
+}
+
+/* line 34, ../sass/_default-variables.scss */
+.container {
+  padding: 0px;
+}
+
+/* line 38, ../sass/_default-variables.scss */
+section.col-sm-12 {
+  padding: 0px;
+}
+
+/* line 42, ../sass/_default-variables.scss */
+.footer {
+  margin-top: 0px;
+  background-color: #430517;
+}
+
+@media (min-width: 768px) {
+  /* line 48, ../sass/_default-variables.scss */
+  .navbar > .container .navbar-brand {
+    margin-left: 0px;
+  }
+}
+/* line 53, ../sass/_default-variables.scss */
+#block-user-login {
+  margin-left: 40px;
+}
+/* line 57, ../sass/_default-variables.scss */
+#block-user-login li {
+  font-family: "Mystery Quest";
+}
+/* line 61, ../sass/_default-variables.scss */
+#block-user-login h2.block-title {
+  margin-top: 20px;
+}
+/* line 64, ../sass/_default-variables.scss */
+#block-user-login .form-control {
+  width: 40%;
+}
+
+/*#custom-jumbotron {
+	background-color: #ff33f3;
+	background-size: 100%;
+	background-position: center;
+	background-size: cover;
+	img.img-responsive {
+		margin: auto;
+	}
+}
+*/

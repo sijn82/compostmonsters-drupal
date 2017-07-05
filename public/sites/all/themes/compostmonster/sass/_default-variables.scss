@@ -1,0 +1,78 @@
+
+body {
+	
+	background-color: #fff;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	border-width: 0px 0px 3px 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius:  0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-color: rgba(67, 5, 23, 1);
+}
+
+button.navbar-toggle {
+  margin-right: 30px;
+}
+
+a.name.navbar-brand {
+	background-color: rgba(67, 5, 23, 1);
+	color: #45b52a;
+	font-family: "Mystery Quest";
+	padding-left: 15px;
+ 	margin-left: 0px;
+ 	/*border-top-left-radius: 4px;*/
+}
+
+h1.page-header {
+	display: none;
+}
+
+.container {
+	padding: 0px;
+}
+
+section.col-sm-12 {
+	padding:0px;
+}
+
+.footer {
+	margin-top: 0px;
+	background-color: rgba(67, 5, 23, 1);
+}
+
+@media (min-width: 768px) {
+.navbar > .container .navbar-brand {
+	margin-left: 0px;
+}
+}
+
+#block-user-login {
+
+	margin-left: 40px;
+
+	li {
+		font-family: "Mystery Quest";
+	}
+
+	h2.block-title {
+		margin-top: 20px;
+	}
+	.form-control {
+		width: 40%;
+	}
+	
+}
+/*#custom-jumbotron {
+	background-color: #ff33f3;
+	background-size: 100%;
+	background-position: center;
+	background-size: cover;
+	img.img-responsive {
+		margin: auto;
+	}
+}
+*/
