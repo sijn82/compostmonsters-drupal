@@ -1,0 +1,101 @@
+.know-your-enemy-homepage {
+  position: relative;
+}
+.sidebar-overlay {
+  position: absolute;
+  top: 90px;
+  right: 5%;
+  height: 100%;
+}
+
+#block-views-factfile-block-1 {
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  outline: 4px dashed red;
+  padding: 10px;
+  margin-top: 15%;
+  h2 {
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+  }
+  ul.pager {
+    display: none;
+  }
+  #slick-views-factfile-1 {
+    .views-field-title {
+      text-align: center;
+      margin: 5% 0 10%;
+      a {
+        font-size: 1.5em;
+        color: lightgreen;
+      }
+    }
+    nav.slick__arrow {
+      padding-bottom: 10px;
+      position: initial;
+    }
+
+    nav button {
+      -webkit-transform: initial;
+      -moz-transform: initial;
+      -ms-transform: initial;
+      -o-transform: initial;
+      transform: initial;
+      // margin-top: 15%;
+      //&.slick-next {
+      //  margin-right: 20%;
+      //}
+      //&.slick-prev {
+      //  margin-left: 20%;
+      //}
+    }
+  }
+}
+#block-views-vive-la-revolution-block {
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  outline: 4px dashed red;
+  padding: 10px;
+  margin-top: 15%;
+  h2 {
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+  }
+  ul.pager {
+    display: none;
+  }
+  #slick-views-vive-la-revolution-2 {
+    .views-field-title {
+      text-align: center;
+      margin: 5% 0 10%;
+      a {
+        font-size: 1.5em;
+        color: lightgreen;
+      }
+    }
+    nav.slick__arrow {
+      padding-bottom: 10px;
+      position: initial;
+    }
+    nav button {
+      -webkit-transform: initial;
+      -moz-transform: initial;
+      -ms-transform: initial;
+      -o-transform: initial;
+      transform: initial;
+      // margin-top: 15%;
+      //&.slick-next {
+      //  margin-right: 20%;
+      //}
+      //&.slick-prev {
+      //  margin-left: 20%;
+      //}
+    }
+  }
+}
+
+

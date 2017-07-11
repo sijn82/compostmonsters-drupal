@@ -134,7 +134,10 @@
   </header> <!-- /#page-header -->
 
   <div class="row">
-
+<!--      <img typeof="foaf:Image" class="img-responsive"-->
+<!--           src="http://thecompostmonsters.local/sites/default/files/campingclem-oil-2400x1600.png"-->
+<!--           width="2400" height="1600" alt="">-->
+    <?php print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
@@ -166,7 +169,7 @@
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="col-sm-3 sidebar-overlay" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>

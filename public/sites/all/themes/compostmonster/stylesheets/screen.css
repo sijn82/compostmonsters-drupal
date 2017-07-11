@@ -152,3 +152,136 @@ section.col-sm-12 {
 	}
 }
 */
+/* line 1, ../sass/_homepage.scss */
+.know-your-enemy-homepage {
+  position: relative;
+}
+
+/* line 4, ../sass/_homepage.scss */
+.sidebar-overlay {
+  position: absolute;
+  top: 90px;
+  right: 5%;
+  height: 100%;
+}
+
+/* line 11, ../sass/_homepage.scss */
+#block-views-factfile-block-1 {
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  outline: 4px dashed red;
+  padding: 10px;
+  margin-top: 15%;
+}
+/* line 18, ../sass/_homepage.scss */
+#block-views-factfile-block-1 h2 {
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+}
+/* line 23, ../sass/_homepage.scss */
+#block-views-factfile-block-1 ul.pager {
+  display: none;
+}
+/* line 27, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-1 .views-field-title {
+  text-align: center;
+  margin: 5% 0 10%;
+}
+/* line 30, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-1 .views-field-title a {
+  font-size: 1.5em;
+  color: lightgreen;
+}
+/* line 35, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-1 nav.slick__arrow {
+  padding-bottom: 10px;
+  position: initial;
+}
+/* line 40, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-1 nav button {
+  -webkit-transform: initial;
+  -moz-transform: initial;
+  -ms-transform: initial;
+  -o-transform: initial;
+  transform: initial;
+}
+
+/* line 56, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block {
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  outline: 4px dashed red;
+  padding: 10px;
+  margin-top: 15%;
+}
+/* line 63, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block h2 {
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+}
+/* line 68, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block ul.pager {
+  display: none;
+}
+/* line 72, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 .views-field-title {
+  text-align: center;
+  margin: 5% 0 10%;
+}
+/* line 75, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 .views-field-title a {
+  font-size: 1.5em;
+  color: lightgreen;
+}
+/* line 80, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 nav.slick__arrow {
+  padding-bottom: 10px;
+  position: initial;
+}
+/* line 84, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 nav button {
+  -webkit-transform: initial;
+  -moz-transform: initial;
+  -ms-transform: initial;
+  -o-transform: initial;
+  transform: initial;
+}
+
+/* line 5, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .slick-slide img {
+  float: left;
+}
+
+/* line 10, ../sass/_carousel_of_horrors.scss */
+.node-monster-factfile.node-teaser {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
+/* line 14, ../sass/_carousel_of_horrors.scss */
+.node-monster-factfile.node-teaser header {
+  margin-top: 20%;
+  width: 25%;
+}
+/* line 23, ../sass/_carousel_of_horrors.scss */
+.node-monster-factfile.node-teaser .field-name-body {
+  width: 25%;
+  text-align: center;
+  float: right;
+  height: auto;
+}
+/* line 32, ../sass/_carousel_of_horrors.scss */
+.node-monster-factfile.node-teaser footer .list-inline li {
+  display: block;
+  clear: right;
+  text-align: center;
+  width: 25%;
+}
+/* line 42, ../sass/_carousel_of_horrors.scss */
+.node-monster-factfile.node-teaser footer .list-inline li.comment-add {
+  display: none;
+}
