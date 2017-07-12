@@ -1,27 +1,72 @@
 .carouselOfHorrors {
+    //border-left: 10px solid black;
+    //border-right: 10px solid black;
+    &#slick-views-factfile-1 {
+        nav button {
+             //margin-top: 15%;
+            &.slick-next {
+                margin-right: 5%;
+            }
+            &.slick-prev {
+                margin-left: 5%;
+            }
+        }
+    }
+    .slick-dots {
+        padding-bottom: 18px;
+        //border-left: 10px solid black;
+        //border-right: 10px solid black;
+    }
     .slick-slide {
-        //height: 480px;
-        //width: 940px;
+        //background-image: url("/sites/default/files/site-design-images/2000px-Film_strip.svg_.png");
+        //background-repeat: round;
         img {
             float: left;
+            margin-left: 10%;
+            margin-top: 2%;
+            //margin-bottom: 7%;
         }
     }
 }
+.upper-film-reel {
+
+    background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-top.png");
+    height: 100px;
+    clear: both;
+    display: block;
+}
+.lower-film-reel {
+
+    background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-top.png");
+    height: 100px;
+    clear: both;
+    display: block;
+}
 .node-monster-factfile.node-teaser {
-    margin-left:15%;
+    margin-left:3%;
     margin-right: 15%;
     text-align: center;
+    //background-image: url("/sites/default/files/site-design-images/2000px-Film_strip.svg_.png");
+    //background-repeat: round;
     header {
-        margin-top: 20%;
+        //margin: 10% auto 5%;
+        //padding-top: 10%;
         width: 25%;
+        position: absolute;
+        top: 10%;
+        h2 {
+            font-size: 3em;
+        }
 
     }
     .field-name-field-image-factfile {
-
+        //background-image: url("/sites/default/files/site-design-images/2000px-Film_strip.svg_.png");
+        //background-repeat: round;
     }
 
     .field-name-body {
-
+        margin-top: 20%;
+        margin-bottom: 1%;
         width: 25%;
         text-align: center;
         float: right;
@@ -30,7 +75,6 @@
     }
     footer {
         .list-inline li {
-
             display: block;
             clear: right;
             text-align: center;

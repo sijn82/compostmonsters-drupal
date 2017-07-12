@@ -251,37 +251,74 @@ section.col-sm-12 {
   transform: initial;
 }
 
-/* line 5, ../sass/_carousel_of_horrors.scss */
+/* line 7, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
+  margin-right: 5%;
+}
+/* line 10, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
+  margin-left: 5%;
+}
+/* line 15, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .slick-dots {
+  padding-bottom: 18px;
+}
+/* line 23, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-slide img {
   float: left;
+  margin-left: 10%;
+  margin-top: 2%;
 }
 
-/* line 10, ../sass/_carousel_of_horrors.scss */
+/* line 31, ../sass/_carousel_of_horrors.scss */
+.upper-film-reel {
+  background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-top.png");
+  height: 100px;
+  clear: both;
+  display: block;
+}
+
+/* line 38, ../sass/_carousel_of_horrors.scss */
+.lower-film-reel {
+  background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-top.png");
+  height: 100px;
+  clear: both;
+  display: block;
+}
+
+/* line 45, ../sass/_carousel_of_horrors.scss */
 .node-monster-factfile.node-teaser {
-  margin-left: 15%;
+  margin-left: 3%;
   margin-right: 15%;
   text-align: center;
 }
-/* line 14, ../sass/_carousel_of_horrors.scss */
+/* line 51, ../sass/_carousel_of_horrors.scss */
 .node-monster-factfile.node-teaser header {
-  margin-top: 20%;
   width: 25%;
+  position: absolute;
+  top: 10%;
 }
-/* line 23, ../sass/_carousel_of_horrors.scss */
+/* line 57, ../sass/_carousel_of_horrors.scss */
+.node-monster-factfile.node-teaser header h2 {
+  font-size: 3em;
+}
+/* line 67, ../sass/_carousel_of_horrors.scss */
 .node-monster-factfile.node-teaser .field-name-body {
+  margin-top: 20%;
+  margin-bottom: 1%;
   width: 25%;
   text-align: center;
   float: right;
   height: auto;
 }
-/* line 32, ../sass/_carousel_of_horrors.scss */
+/* line 77, ../sass/_carousel_of_horrors.scss */
 .node-monster-factfile.node-teaser footer .list-inline li {
   display: block;
   clear: right;
   text-align: center;
   width: 25%;
 }
-/* line 42, ../sass/_carousel_of_horrors.scss */
+/* line 86, ../sass/_carousel_of_horrors.scss */
 .node-monster-factfile.node-teaser footer .list-inline li.comment-add {
   display: none;
 }

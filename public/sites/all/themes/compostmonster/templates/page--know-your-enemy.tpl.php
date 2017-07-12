@@ -155,7 +155,9 @@
                 <ul class="action-links"><?php print render($action_links); ?></ul>
             <?php endif; ?>
 <!--            --><?php //echo('hello?')  ?>
-            <?php print render($page['content']); ?>
+            <div class="upper-film-reel"></div>
+                <?php print render($page['content']); ?>
+            <div class="lower-film-reel"></div>
         </section>
 
         <?php if (!empty($page['sidebar_second'])): ?>
