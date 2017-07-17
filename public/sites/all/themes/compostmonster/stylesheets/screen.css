@@ -251,74 +251,84 @@ section.col-sm-12 {
   transform: initial;
 }
 
-/* line 7, ../sass/_carousel_of_horrors.scss */
+/* line 18, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
   margin-right: 5%;
 }
-/* line 10, ../sass/_carousel_of_horrors.scss */
+/* line 21, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
   margin-left: 5%;
 }
-/* line 15, ../sass/_carousel_of_horrors.scss */
+/* line 26, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-dots {
   padding-bottom: 18px;
 }
-/* line 23, ../sass/_carousel_of_horrors.scss */
+/* line 32, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-slide img {
   float: left;
+  border-left: 8px solid black;
+  border-right: 8px solid black;
+  margin-right: 20px;
+}
+/* line 42, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser {
   margin-left: 10%;
-  margin-top: 2%;
-}
-
-/* line 31, ../sass/_carousel_of_horrors.scss */
-.upper-film-reel {
-  background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-top.png");
-  height: 100px;
-  clear: both;
-  display: block;
-}
-
-/* line 38, ../sass/_carousel_of_horrors.scss */
-.lower-film-reel {
-  background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-top.png");
-  height: 100px;
-  clear: both;
-  display: block;
-}
-
-/* line 45, ../sass/_carousel_of_horrors.scss */
-.node-monster-factfile.node-teaser {
-  margin-left: 3%;
-  margin-right: 15%;
+  margin-right: 10%;
   text-align: center;
+  border-right: 8px solid black;
 }
-/* line 51, ../sass/_carousel_of_horrors.scss */
-.node-monster-factfile.node-teaser header {
-  width: 25%;
-  position: absolute;
-  top: 10%;
+/* line 50, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser header {
+  padding-right: 20px;
+  padding-bottom: 10px;
+  clear: both;
+  float: right;
+  text-align: right;
 }
-/* line 57, ../sass/_carousel_of_horrors.scss */
-.node-monster-factfile.node-teaser header h2 {
+/* line 61, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser header h2 {
   font-size: 3em;
 }
-/* line 67, ../sass/_carousel_of_horrors.scss */
-.node-monster-factfile.node-teaser .field-name-body {
+/* line 66, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-top img, .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-bottom img {
+  margin-left: 0;
+}
+/* line 70, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser .field-name-body {
   margin-top: 20%;
   margin-bottom: 1%;
-  width: 25%;
+  margin-right: 20px;
   text-align: center;
-  float: right;
   height: auto;
 }
-/* line 77, ../sass/_carousel_of_horrors.scss */
-.node-monster-factfile.node-teaser footer .list-inline li {
+/* line 84, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li {
   display: block;
   clear: right;
   text-align: center;
-  width: 25%;
 }
-/* line 86, ../sass/_carousel_of_horrors.scss */
-.node-monster-factfile.node-teaser footer .list-inline li.comment-add {
+/* line 93, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-add, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment_forbidden {
   display: none;
+}
+
+/* line 101, ../sass/_carousel_of_horrors.scss */
+.upper-film-reel-top {
+  height: 10px;
+  clear: both;
+  display: block;
+}
+
+/* line 109, ../sass/_carousel_of_horrors.scss */
+.lower-film-reel {
+  background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-bottom-alt.png");
+  height: 100px;
+  clear: both;
+  display: block;
+}
+
+/* line 117, ../sass/_carousel_of_horrors.scss */
+.lower-film-reel-beneath {
+  height: 100%;
+  background-color: black;
 }
