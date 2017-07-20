@@ -27,9 +27,20 @@ a.name.navbar-brand {
  	/*border-top-left-radius: 4px;*/
 }
 
-h1.page-header {
+.front h1.page-header {
 	display: none;
 }
+
+//h1.page-header {
+//	//background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
+//	//background-repeat: round;
+//	display: block;
+//	margin-bottom: 0;
+//	font-family: $fredericka;
+//	font-size: $resistance-title * 3.5;
+//	//color: #fffff0;
+//	color: #000;
+//}
 
 .container {
 	padding: 0px;

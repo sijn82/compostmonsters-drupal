@@ -27,3 +27,13 @@ regions[page_bottom]    = 'Page bottom'
 
 ;stylesheets[all][] = css/style.css
 stylesheets[all][] = stylesheets/screen.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Fonts
+;;;;;;;;;;;;;;;;;;;;;
+
+fonts[edge_fonts][] = "fredericka-the-great:n4#list-of-available-fonts"
+fonts[google_fonts_api][] = "Fredericka the Great&subset=latin#regular"
+fonts[google_fonts_api][] = "Mystery Quest&subset=latin#regular"
+fonts[google_fonts_api][] = "Mystery Quest&subset=latin-ext#regular"
+

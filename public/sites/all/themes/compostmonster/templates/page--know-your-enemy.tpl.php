@@ -155,7 +155,7 @@
                 <ul class="action-links"><?php print render($action_links); ?></ul>
             <?php endif; ?>
 <!--            --><?php //echo('hello?')  ?>
-            <div class="upper-film-reel-top"></div>
+<!--            <div class="upper-film-reel-top"></div>-->
                 <?php print render($page['content']); ?>
 <!--            <div class="lower-film-reel">--><?php //?><!-- //print render($page['content'])</div>-->
 <!--            <div class="lower-film-reel-beneath"></div>-->

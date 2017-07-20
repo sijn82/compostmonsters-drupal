@@ -99,45 +99,45 @@ a.name.navbar-brand {
 }
 
 /* line 30, ../sass/_default-variables.scss */
-h1.page-header {
+.front h1.page-header {
   display: none;
 }
 
-/* line 34, ../sass/_default-variables.scss */
+/* line 45, ../sass/_default-variables.scss */
 .container {
   padding: 0px;
 }
 
-/* line 38, ../sass/_default-variables.scss */
+/* line 49, ../sass/_default-variables.scss */
 section.col-sm-12 {
   padding: 0px;
 }
 
-/* line 42, ../sass/_default-variables.scss */
+/* line 53, ../sass/_default-variables.scss */
 .footer {
   margin-top: 0px;
   background-color: #430517;
 }
 
 @media (min-width: 768px) {
-  /* line 48, ../sass/_default-variables.scss */
+  /* line 59, ../sass/_default-variables.scss */
   .navbar > .container .navbar-brand {
     margin-left: 0px;
   }
 }
-/* line 53, ../sass/_default-variables.scss */
+/* line 64, ../sass/_default-variables.scss */
 #block-user-login {
   margin-left: 40px;
 }
-/* line 57, ../sass/_default-variables.scss */
+/* line 68, ../sass/_default-variables.scss */
 #block-user-login li {
   font-family: "Mystery Quest";
 }
-/* line 61, ../sass/_default-variables.scss */
+/* line 72, ../sass/_default-variables.scss */
 #block-user-login h2.block-title {
   margin-top: 20px;
 }
-/* line 64, ../sass/_default-variables.scss */
+/* line 75, ../sass/_default-variables.scss */
 #block-user-login .form-control {
   width: 40%;
 }
@@ -251,33 +251,37 @@ section.col-sm-12 {
   transform: initial;
 }
 
-/* line 18, ../sass/_carousel_of_horrors.scss */
+/* line 16, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors article.node-monster-factfile {
+  padding-bottom: 0;
+}
+/* line 23, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
   margin-right: 5%;
 }
-/* line 21, ../sass/_carousel_of_horrors.scss */
+/* line 26, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
   margin-left: 5%;
 }
-/* line 26, ../sass/_carousel_of_horrors.scss */
+/* line 31, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-dots {
   padding-bottom: 18px;
 }
-/* line 32, ../sass/_carousel_of_horrors.scss */
+/* line 37, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-slide img {
   float: left;
   border-left: 8px solid black;
   border-right: 8px solid black;
   margin-right: 20px;
 }
-/* line 42, ../sass/_carousel_of_horrors.scss */
+/* line 47, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser {
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
   border-right: 8px solid black;
 }
-/* line 50, ../sass/_carousel_of_horrors.scss */
+/* line 55, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser header {
   padding-right: 20px;
   padding-bottom: 10px;
@@ -285,15 +289,15 @@ section.col-sm-12 {
   float: right;
   text-align: right;
 }
-/* line 61, ../sass/_carousel_of_horrors.scss */
+/* line 66, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser header h2 {
   font-size: 3em;
 }
-/* line 66, ../sass/_carousel_of_horrors.scss */
+/* line 71, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-top img, .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-bottom img {
   margin-left: 0;
 }
-/* line 70, ../sass/_carousel_of_horrors.scss */
+/* line 75, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-body {
   margin-top: 20%;
   margin-bottom: 1%;
@@ -301,25 +305,172 @@ section.col-sm-12 {
   text-align: center;
   height: auto;
 }
-/* line 84, ../sass/_carousel_of_horrors.scss */
+/* line 89, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li {
   display: block;
   clear: right;
   text-align: center;
 }
-/* line 93, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-add, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment_forbidden {
+/* line 98, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-add, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment_forbidden, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-comments {
   display: none;
 }
 
-/* line 101, ../sass/_carousel_of_horrors.scss */
+/* line 109, ../sass/_carousel_of_horrors.scss */
+.page-comment .region-content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+/* line 116, ../sass/_carousel_of_horrors.scss */
+.page-comment .comment .list-inline {
+  clear: left;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+/* line 121, ../sass/_carousel_of_horrors.scss */
+.page-comment .comment .submitted {
+  padding-top: 10px;
+}
+/* line 124, ../sass/_carousel_of_horrors.scss */
+.page-comment .comment h3 .permalink {
+  display: none;
+}
+/* line 127, ../sass/_carousel_of_horrors.scss */
+.page-comment .comment p {
+  color: black;
+}
+
+/* line 134, ../sass/_carousel_of_horrors.scss */
+article.node-monster-factfile {
+  padding-bottom: 15px;
+}
+
+/* line 139, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile .field-label {
+  font-family: "Fredericka the Great";
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #000;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
+/* line 147, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile header {
+  text-align: center;
+}
+/* line 149, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile header span.submitted {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+}
+/* line 155, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+/* line 160, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments h2 {
+  font-size: 1.5em;
+  font-family: "Fredericka the Great";
+  color: #000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 167, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .comment {
+  background-color: rgba(100, 100, 100, 0.1);
+  text-align: left;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+/* line 173, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .comment .list-inline {
+  clear: left;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+/* line 181, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .comment h3 .permalink {
+  display: none;
+}
+/* line 184, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .comment p {
+  color: black;
+  padding-bottom: 5px;
+}
+/* line 188, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .comment.well {
+  margin-top: 10px;
+  margin-bottom: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+/* line 198, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .indented .comment {
+  background-color: rgba(200, 200, 200, 0.1);
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+/* line 203, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .indented .comment p {
+  width: 50%;
+  float: right;
+  padding-bottom: 5px;
+  color: #2d6987;
+}
+/* line 209, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .indented .comment .list-inline {
+  clear: right;
+  padding-bottom: 10px;
+}
+/* line 218, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .indented .comment.well {
+  margin-bottom: 0;
+  margin-top: 0px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+/* line 225, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile #comments .indented .comment .new {
+  color: orange;
+  font-family: "Fredericka the Great";
+}
+/* line 232, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile footer {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5px;
+}
+/* line 236, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile footer .list-inline {
+  margin-left: 0;
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 244, ../sass/_carousel_of_horrors.scss */
+.node-type-monster-factfile footer .field-name-field-tags {
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* line 252, ../sass/_carousel_of_horrors.scss */
 .upper-film-reel-top {
   height: 10px;
   clear: both;
   display: block;
 }
 
-/* line 109, ../sass/_carousel_of_horrors.scss */
+/* line 260, ../sass/_carousel_of_horrors.scss */
 .lower-film-reel {
   background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-bottom-alt.png");
   height: 100px;
@@ -327,8 +478,62 @@ section.col-sm-12 {
   display: block;
 }
 
-/* line 117, ../sass/_carousel_of_horrors.scss */
+/* line 268, ../sass/_carousel_of_horrors.scss */
 .lower-film-reel-beneath {
   height: 100%;
   background-color: black;
+}
+
+/* line 5, ../sass/_vive_la_resistance.scss */
+h1.page-header {
+  display: block;
+  margin-bottom: 0;
+  font-family: "Fredericka the Great";
+  font-size: 10.5em;
+  color: #000;
+}
+
+/* line 18, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font, .page-know-your-enemy .chalk-board-font {
+  background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
+  background-repeat: round;
+}
+/* line 21, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article, .page-know-your-enemy .chalk-board-font article {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+/* line 28, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article h2 a, .page-know-your-enemy .chalk-board-font article h2 a {
+  font-family: "Fredericka the Great";
+  font-size: 3em;
+  color: #fffff0;
+}
+/* line 35, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li, .page-know-your-enemy .chalk-board-font article footer .list-inline li {
+  font-family: "Fredericka the Great";
+}
+/* line 37, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li .node-readmore a, .page-know-your-enemy .chalk-board-font article footer .list-inline li .node-readmore a {
+  padding-top: 10px;
+}
+/* line 40, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment-add, .page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment_forbidden, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment-add, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment_forbidden {
+  display: none;
+}
+
+/* line 51, ../sass/_vive_la_resistance.scss */
+.node-type-monster-factfile .field-name-field-image-factfile img {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 56, ../sass/_vive_la_resistance.scss */
+.node-type-monster-factfile .field-name-body {
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
 }
