@@ -343,12 +343,12 @@ section.col-sm-12 {
 }
 
 /* line 134, ../sass/_carousel_of_horrors.scss */
-article.node-monster-factfile {
+article.node-monster-factfile, article.node-survival-guides {
   padding-bottom: 15px;
 }
 
 /* line 139, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile .field-label {
+.node-type-monster-factfile .field-label, .node-survival-guides .field-label {
   font-family: "Fredericka the Great";
   font-size: 1.5em;
   font-weight: normal;
@@ -357,24 +357,24 @@ article.node-monster-factfile {
   padding-top: 15px;
 }
 /* line 147, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile header {
+.node-type-monster-factfile header, .node-survival-guides header {
   text-align: center;
 }
 /* line 149, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile header span.submitted {
+.node-type-monster-factfile header span.submitted, .node-survival-guides header span.submitted {
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
 }
 /* line 155, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments {
+.node-type-monster-factfile #comments, .node-survival-guides #comments {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5px;
 }
 /* line 160, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments h2 {
+.node-type-monster-factfile #comments h2, .node-survival-guides #comments h2 {
   font-size: 1.5em;
   font-family: "Fredericka the Great";
   color: #000;
@@ -382,29 +382,29 @@ article.node-monster-factfile {
   padding-bottom: 10px;
 }
 /* line 167, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment {
+.node-type-monster-factfile #comments .comment, .node-survival-guides #comments .comment {
   background-color: rgba(100, 100, 100, 0.1);
   text-align: left;
   padding-bottom: 5px;
   padding-left: 10px;
 }
 /* line 173, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment .list-inline {
+.node-type-monster-factfile #comments .comment .list-inline, .node-survival-guides #comments .comment .list-inline {
   clear: left;
   padding-left: 10px;
   padding-bottom: 10px;
 }
 /* line 181, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment h3 .permalink {
+.node-type-monster-factfile #comments .comment h3 .permalink, .node-survival-guides #comments .comment h3 .permalink {
   display: none;
 }
 /* line 184, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment p {
+.node-type-monster-factfile #comments .comment p, .node-survival-guides #comments .comment p {
   color: black;
   padding-bottom: 5px;
 }
 /* line 188, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment.well {
+.node-type-monster-factfile #comments .comment.well, .node-survival-guides #comments .comment.well {
   margin-top: 10px;
   margin-bottom: 0;
   -webkit-border-radius: 6px;
@@ -412,26 +412,26 @@ article.node-monster-factfile {
   border-radius: 6px;
 }
 /* line 198, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment {
+.node-type-monster-factfile #comments .indented .comment, .node-survival-guides #comments .indented .comment {
   background-color: rgba(200, 200, 200, 0.1);
   text-align: right;
   padding-top: 5px;
   padding-right: 10px;
 }
 /* line 203, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment p {
+.node-type-monster-factfile #comments .indented .comment p, .node-survival-guides #comments .indented .comment p {
   width: 50%;
   float: right;
   padding-bottom: 5px;
   color: #2d6987;
 }
 /* line 209, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment .list-inline {
+.node-type-monster-factfile #comments .indented .comment .list-inline, .node-survival-guides #comments .indented .comment .list-inline {
   clear: right;
   padding-bottom: 10px;
 }
 /* line 218, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment.well {
+.node-type-monster-factfile #comments .indented .comment.well, .node-survival-guides #comments .indented .comment.well {
   margin-bottom: 0;
   margin-top: 0px;
   -webkit-border-radius: 6px;
@@ -439,25 +439,25 @@ article.node-monster-factfile {
   border-radius: 6px;
 }
 /* line 225, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment .new {
+.node-type-monster-factfile #comments .indented .comment .new, .node-survival-guides #comments .indented .comment .new {
   color: orange;
   font-family: "Fredericka the Great";
 }
 /* line 232, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile footer {
+.node-type-monster-factfile footer, .node-survival-guides footer {
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 5px;
 }
 /* line 236, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile footer .list-inline {
+.node-type-monster-factfile footer .list-inline, .node-survival-guides footer .list-inline {
   margin-left: 0;
   border-bottom: 1px solid black;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 /* line 244, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile footer .field-name-field-tags {
+.node-type-monster-factfile footer .field-name-field-tags, .node-survival-guides footer .field-name-field-tags {
   display: inline-block;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -536,4 +536,31 @@ h1.page-header {
   margin-right: auto;
   width: 80%;
   height: auto;
+}
+
+/* line 67, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-field-article-image img {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 72, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body {
+  color: #000;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+/* line 76, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body ul li {
+  list-style-position: inside;
+  list-style-type: circle;
+  padding-left: 3em;
+  padding-bottom: 5px;
+}
+/* line 84, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body h3 strong {
+  font-size: 2em;
+  font-family: "Fredericka the Great";
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  display: block;
 }

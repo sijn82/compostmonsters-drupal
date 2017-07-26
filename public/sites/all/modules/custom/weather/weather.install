@@ -1,0 +1,180 @@
+<?php
+
+/**
+ * Implements hook_schema - creates the weather database layout to insert user inputted query data into.
+ */
+function weather_schema()
+{
+    $schema['weather'] = [
+        'description' => 'The base table for \'Weather\' Module.',
+        'primary key' => ['submission_id'],
+        'fields' => [
+            'submission_id' => [
+                'description' => 'The primary identifier of each weather enquiry.',
+                // Using serial here to auto increment.
+                'type' => 'serial',
+                'unsigned' => true,
+                'not null' => true,
+            ],
+            'latitude' => [
+                'description' => 'The user given latitude of the enquiry.',
+                'type' => 'numeric',
+                'precision' => 10,
+                'scale' => 8,
+                'unsigned' => false,
+                'not null' => true,
+            ],
+            'longitude' => [
+                'description' => 'The user given longitude of the enquiry.',
+                'type' => 'numeric',
+                'precision' => 11,
+                'scale' => 8,
+                'unsigned' => false,
+                'not null' => true,
+            ],
+            'request_timestamp' => [
+                'description' => 'The timestamp of the request.',
+                'type' => 'int',
+                'unsigned' => true,
+                'not null' => true,
+            ],
+            'user_ip_address' => [
+                'description' => 'The users IP address.',
+                'type' => 'varchar',
+                'length' => 15,
+                'not null' => true,
+            ],
+            'location' => [
+                'description' => 'The resulting location from the user search.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => false,
+            ],
+        ],
+
+    ];
+
+    // drupal_get_schema_unprocessed retrieves a cached version of the standard cached table
+    // and creates clone of it named 'cache_weather'.
+    $schema['cache_weather'] = drupal_get_schema_unprocessed('system', 'cache');
+
+    return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ * The variables contained in $variables were previously created in variable_set (& used with variable_get)
+ * and would continue to exist in the variable database table unless explicitly removed.
+ */
+function weather_uninstall()
+{
+    variable_del('weather_cache_expiry');
+    variable_del('weather_form_visibility');
+}
+
+/**
+ * Implements hook_update_N - to change the data type of IP address and unsigned attributes of Lat and Long.
+ */
+function weather_update_7000()
+{
+    db_change_field('weather', 'longitude', 'longitude', [
+        'longitude' => [
+            'description' => 'The user given longitude of the enquiry.',
+            'mysql_type' => 'decimal',
+            'type' => 'int',
+            'unsigned' => false,
+            'not null' => true,
+    ]]);
+
+    db_change_field('weather', 'latitude', 'latitude', [
+        'latitude' => [
+            'description' => 'The user given latitude of the enquiry.',
+            'mysql_type' => 'decimal',
+            'type' => 'int',
+            'unsigned' => false,
+            'not null' => true,
+    ]]);
+
+    db_change_field('weather', 'user_ip_address', 'user_ip_address', [
+        'user_ip_address' => [
+        'description' => 'The users IP address.',
+        'type' => 'varchar',
+        'length' => 15,
+        'not null' => true,
+    ]]);
+
+    return t('Weather table updated successfully.');
+}
+
+/**
+ * Implements hook_update_N - to change the data type of IP address and unsigned attributes of Lat and Long.
+ * 7001 was required because I unnecessarily uninstalled/reinstalled the module rather than updated it through
+ * update.php.
+ */
+function weather_update_7001()
+{
+    db_change_field('weather', 'longitude', 'longitude', [
+        'description' => 'The user given longitude of the enquiry.',
+        'mysql_type' => 'decimal',
+        'type' => 'int',
+        'unsigned' => false,
+        'not null' => true,
+    ]);
+
+    db_change_field('weather', 'latitude', 'latitude', [
+        'description' => 'The user given latitude of the enquiry.',
+        'mysql_type' => 'decimal',
+        'type' => 'int',
+        'unsigned' => false,
+        'not null' => true,
+    ]);
+
+    db_change_field('weather', 'user_ip_address', 'user_ip_address', [
+        'description' => 'The users IP address.',
+        'type' => 'varchar',
+        'length' => 15,
+        'not null' => true,
+    ]);
+
+    return t('Weather table updated successfully.');
+}
+
+/**
+ * Implements hook_update_N -
+ * 7002 was required because mysql_type decimal has limited use and will be better served as numeric.
+ */
+function weather_update_7002()
+{
+    db_change_field('weather', 'latitude', 'latitude', [
+        'description' => 'The user given latitude of the enquiry.',
+        'type' => 'numeric',
+        'precision' => 10,
+        'scale' => 8,
+        'unsigned' => false,
+        'not null' => true,
+    ]);
+
+    db_change_field('weather', 'longitude', 'longitude', [
+        'description' => 'The user given longitude of the enquiry.',
+        'type' => 'numeric',
+        'precision' => 11,
+        'scale' => 8,
+        'unsigned' => false,
+        'not null' => true,
+    ]);
+
+    return t('Weather table updated successfully again.');
+}
+
+/**
+ * Implements hook_update_N - 7003 adds a new column to the database to store location details of the search.
+ */
+function weather_update_7003()
+{
+    db_add_field('weather', 'location', [
+        'description' => 'The resulting location from the user search.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+    ]);
+}

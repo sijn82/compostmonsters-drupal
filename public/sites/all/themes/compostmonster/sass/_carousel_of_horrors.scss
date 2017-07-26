@@ -131,11 +131,11 @@ $resistance-title: 3em;
 }
 // This section is for the know-your-enemy/monster factfile node view.
 
-article.node-monster-factfile {
+article.node-monster-factfile, article.node-survival-guides {
     padding-bottom: 15px;
 }
 
-.node-type-monster-factfile {
+.node-type-monster-factfile, .node-survival-guides {
     .field-label {
         font-family: $fredericka;
         font-size: $resistance-title / 2;

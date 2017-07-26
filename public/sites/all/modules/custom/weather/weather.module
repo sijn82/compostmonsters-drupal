@@ -1,0 +1,415 @@
+<?php
+
+/**
+ * @file
+ *  A module to display weather information about London UK in a block.
+ *  At a specific URL, currently '/city-weather-data' this module will also provide a basic form
+ *  to input longitude and latitude coordinates,
+ *  which generates the associated city's current weather conditions.
+ */
+
+define("WEATHER_CACHE_DEFAULT", 10800);
+require_once __DIR__ . '/weather.admin.inc';
+require_once __DIR__ . '/weather.block.inc';
+require_once __DIR__ . '/weather.cron.inc';
+require_once __DIR__ . '/weather.exceptions.inc';
+
+/**
+ * Implements hook_help().
+ * Display help and module information.
+ */
+function weather_help($path, $arg)
+{
+    switch ($path) {
+        case 'admin/help#weather':
+            $ret_val = '<h3>' . t('About') . '</h3>';
+            $ret_val .= '<p>' . t('A weather module to display the current weather conditions in London, UK.') . '</p>';
+            return $ret_val;
+            break;
+    }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function weather_permission()
+{
+    return [
+        'access weather data form' => [
+            'title' => t('Access the Weather Data Form and Results page'),
+        ],
+        'access weather data reports' => [
+            'title' => t('Access the City Weather Data - Reports page (view archived results).'),
+        ],
+        'access weather data configuration' => [
+            'title' => t('Access the Weather Data Configuration page.')
+        ],
+    ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function weather_theme()
+{
+    $theme = [];
+    $theme['weather_info'] = [
+        'template' => 'templates/weather-info',
+        'variables' => [
+            'location' => null,
+            'temperature' => null,
+            'current_weather' => null,
+            'humidity' => null,
+            'temperature_suffix' => 'ºC',
+            'return_button' => false,
+        ],
+    ];
+
+    return $theme;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function weather_menu()
+{
+    $items['city-weather-data'] = [
+        'title' => 'City Weather Data',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => ['weather_form'],
+        'access callback' => 'page_access_check',
+        'access arguments' => ['access weather data form'],
+    ];
+
+    $items['city-weather-data/results'] = [
+        'title' => 'City Weather Data - Results',
+        'page callback' => 'weather_results',
+        'access callback' => 'page_access_check',
+        'access arguments' => ['access weather data form'],
+    ];
+
+    $items['admin/reports/weather-log'] = [
+        'title' => 'City Weather Data - Reports',
+        'page callback' => 'weather_reports',
+        'access callback' => 'user_access',
+        'access arguments' => ['access weather data reports'],
+    ];
+
+    $items['admin/reports/weather-log/delete/%'] = [
+        'page callback' => 'weather_delete_row',
+        'page arguments' => [4],
+        'access callback' => 'user_access',
+        'access arguments' => ['access weather data reports'],
+        'type' => MENU_CALLBACK,
+    ];
+
+    $items['admin/reports/weather-log/delete-all'] = [
+        'page callback' => 'weather_delete_all',
+        'access callback' => 'user_access',
+        'access arguments' => ['access weather data reports'],
+        'type' => MENU_CALLBACK,
+    ];
+
+    $items['admin/config/weather-data'] = [
+        'title' => 'Weather Data Configuration',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => ['weather_config_form'],
+        'access callback' => 'user_access',
+        'access arguments' => ['access weather data configuration'],
+    ];
+
+    $items['admin/config/weather-batch-data'] = [
+        'title' => 'Weather Data Bulk Processing Page',
+        'page callback' => 'weather_batch_display',
+        'access callback' => 'user_access',
+        'access arguments' => ['access weather data configuration'],
+    ];
+
+    return $items;
+}
+
+/**
+ * Implements custom function to check whether form visibility for city-weather-data & /results
+ * is turned on in the configuration settings and whether the user trying to gain access has the necessary privileges.
+ */
+function page_access_check()
+{
+    if (true !== variable_get('weather_form_visibility', true)) {
+        return false;
+    }
+
+    return user_access('access weather data form');
+}
+
+/**
+ * Implements hook_form().
+ * This function will generate the 'City Weather Data' form.
+ */
+function weather_form($form, &$form_state)
+{
+    $form['latitude'] = [
+        '#type' => 'textfield',
+        '#description' => 'Enter the Latitude here',
+        '#required' => true,
+        '#title' => t('Latitude'),
+    ];
+
+    $form['longitude'] = [
+        '#type' => 'textfield',
+        '#description' => 'Enter the Longitude here',
+        '#required' => true,
+        '#title' => t('Longitude'),
+    ];
+
+    $form['submit'] = [
+        '#type' => 'submit',
+        '#value' => 'Submit',
+    ];
+
+    return $form;
+}
+
+/**
+ * The function below checks the inputted data for likely errors and guides the user to more effective searches.
+ */
+function weather_form_validate(&$form, &$form_state)
+{
+    // Ensures only numeric data is submitted for longitude.
+    if (!is_numeric($form_state['values']['longitude'])) {
+        form_set_error('longitude', t('The Longitude field must be numeric.'));
+
+        // Ensures the numerical value is a valid longitudinal possibility.
+    } elseif (floatval($form_state['values']['longitude']) <= -180
+        || floatval($form_state['values']['longitude']) >= 180
+    ) {
+        form_set_error(
+            'longitude',
+            t('Your longitudinal coordinates are not of this earth.')
+        );
+
+        // Ensure the character length remains reasonable and is something that can be stored in the database.
+    } elseif (strlen($form_state['values']['longitude']) > 12) {
+        form_set_error(
+            'longitude',
+            t('You have exceeded the reasonable character length, please limit your longitudinal search to 11 digits.')
+        );
+    }
+
+    // Ensures only numeric data is submitted for latitude.
+    if (!is_numeric($form_state['values']['latitude'])) {
+        form_set_error('latitude', t('The Latitude field must be numeric.'));
+
+        // Ensures the numerical value is a valid latitudinal possibility.
+    } elseif (floatval($form_state['values']['latitude']) <= -90
+        || floatval($form_state['values']['latitude']) >= 90
+    ) {
+        form_set_error(
+            'latitude',
+            t('Your latitudinal coordinates are out of this world.')
+        );
+
+        // Ensure the character length remains reasonable and is something that can be stored in the database.
+    } elseif (strlen($form_state['values']['latitude']) > 11) {
+        form_set_error(
+            'latitude',
+            t('You have exceeded the reasonable character length, please limit your latitudinal search to 10 digits.')
+        );
+    }
+}
+
+/**
+ * Once the form has been submitted this function will contact the Open Weather Map API and attempt to retrieve relevant
+ * data.
+ */
+function weather_form_submit(&$form, &$form_state)
+{
+    // db_insert inputs the user submitted data into the database table created in weather_schema.
+    $insert_id = db_insert('weather')
+        ->fields(['latitude', 'longitude', 'request_timestamp', 'user_ip_address'])
+        ->values([
+            'latitude' => $form_state['values']['latitude'],
+            'longitude' => $form_state['values']['longitude'],
+            'request_timestamp' => REQUEST_TIME,
+            'user_ip_address' => $_SERVER['REMOTE_ADDR'],
+        ])
+        ->execute();
+
+    try {
+        $weather_results = weather_contents($form_state['values']['latitude'], $form_state['values']['longitude']);
+
+        if (empty($weather_results['message'])) {
+            $_SESSION['weather_data'] =  $weather_results;
+//                'current_weather' => $weather_results['current_weather'],
+//                'temperature' => $weather_results['temperature'],
+//                'humidity' => $weather_results['humidity'],
+//                'location' => $weather_results['location'],
+//                'temperature_suffix' => $weather_results['temperature_suffix'],
+            //;
+
+            db_update('weather')
+                ->fields(['location' => $weather_results['location']])
+                ->condition('submission_id', $insert_id, '=')
+                ->execute();
+
+            $form_state['redirect'] = 'city-weather-data/results';
+        } else {
+            drupal_set_message(t('Your Latitude and Longitude did not produce a city. Please try again.'), 'error');
+        }
+    } catch (WeatherApiException $e) {
+        drupal_set_message(t('Unable to retrieve data, please try again later.'), 'error');
+    }
+}
+
+/**
+ * Creates the variables for weather_block_view() $block['content'].
+ */
+function weather_contents($lat, $long)
+{
+    if (!is_numeric($lat) || !is_numeric($long)) {
+        throw new WeatherApiException("Submitted data is not numeric.");
+    }
+
+    $cache_key = "weather_{$lat}_{$long}";
+    $cache_result = cache_get($cache_key, 'cache_weather');
+
+    // Checking if the cached result is already stored, if condition is failed it will
+    // continue to run the function and store the result.
+    if ($cache_result !== false) {
+        dvm('Cached data found.');
+
+        return $cache_result->data;
+    }
+
+    // Sending API request and decoding it for $result, if not already cached.
+    $response = drupal_http_request("http://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={$long}&units=metric&APPID=9943aa3b9ab2a0c021b1afd4b779d53b", $options = ['timeout' => 5]);
+    //These other two were used to make the API deliberately fail for testing purposes.
+    //$response = drupal_http_request("http://api.openweathermap.org/data/2.5/weather?", $options = ['timeout' => 1]);
+    //$response = drupal_http_request("http://10.255.255.1/data/2.5/weather?lat={$lat}&lon=$long&units=metric&APPID=9943aa3b9ab2a0c021b1afd4b779d53b", $options = ['timeout' => 1]);
+
+    // Decode $response->data to look for an empty location field.  This should indicate that a city is not located
+    // at the submitted lat and long but there have been some api issues which make testing this problematic.
+    $result = json_decode($response->data);
+    if (empty($result->name)) {
+        throw new WeatherApiException("Unable to locate city.");
+    }
+
+    // If api request to openweathermap.org is anything other that 200 (successful),
+    // then a WeatherApiException is thrown and watchdog log message is made available.
+    if ((int)$response->code !== 200) {
+        // Provides an error message on the Logs table at admin/config/system/cron/jobs/list/ultimate_weather_cron/logs.
+        $watchdog_message = 'There was a problem accessing request - %request.<br>Error: %data<br>Status: %status,<br>Error: %error';
+        watchdog(
+            'weather',
+            $watchdog_message,
+            $error_code = [
+                '%request' => isset($response->request) ? $response->request : "",
+                '%data' => isset($response->data) ? $response->data : "",
+                '%status' => isset($response->status_message) ? $response->status_message : "",
+                '%error' => isset($response->error) ? $response->error : "",
+            ],
+            WATCHDOG_ERROR
+        );
+            throw new WeatherApiException("Unable to retrieve data from the Weather API.", (int)$response->code);
+    } else {
+        $result = json_decode($response->data);
+        // Variables created for the relevant data.
+        $location = isset($result->name) ? $result->name : '';
+        $current_weather = isset($result->weather[0]->main) ? $result->weather[0]->main : '';
+        $temperature = isset($result->main->temp) ? $result->main->temp : '';
+        $humidity = isset($result->main->humidity) ? $result->main->humidity : '';
+        $message = isset($result->message) ? $result->message : '';
+
+        // Building a render array for weather_info.
+        $weather_data = [
+            'location' => $location,
+            'temperature' => $temperature,
+            'current_weather' => $current_weather,
+            'humidity' => $humidity,
+            'message' => $message,
+        ];
+
+        // Optionally use the $weather_data to be converted and displayed by another module.
+        drupal_alter('weather_data', $weather_data);
+
+        // Caching the results for 3 hours (or new configuration from admin/config/weather-data -> 'Cache Expiry' field.) and return.
+        cache_set($cache_key, $weather_data, 'cache_weather', (time() + variable_get('weather_cache_expiry', WEATHER_CACHE_DEFAULT)));
+        dpm('No cache data found. Adding cache to expire at ' . (time() + variable_get('weather_cache_expiry', WEATHER_CACHE_DEFAULT)) . ' unix time stamp.');
+        return $weather_data;
+    }
+}
+
+/**
+ * Implements hook_flush_caches().
+ */
+function weather_flush_caches()
+{
+    return ['cache_weather'];
+}
+
+/**
+ * This function (page callback) is called when the user is redirected to city-weather-data/results,
+ * it's called from the weather_menu function above.
+ * $_SESSION stores the variables and their associated data,
+ * from the initial form page to the redirected results.
+ */
+function weather_results()
+{
+    $weather_results = [
+        '#theme' => 'weather_info',
+        '#return_button' => true,
+    ];
+
+    foreach ($_SESSION['weather_data'] as $key => $value) {
+        $weather_results["#" . $key] = $value;
+    }
+
+    return $weather_results;
+}
+
+
+
+
+/**
+ * Information gathered from API request.
+ *
+ * (object) array( 'request' => "GET /data/2.5/weather?id=2643743&APPID=9943aa3b9ab2a0c021b1afd4b779d53b
+ * HTTP/1.0\r\nUser-Agent: Drupal (+http://drupal.org/)\r\nHost: api.openweathermap.org\r\n\r\n",
+ * 'data' => '{
+ *  "coord":{"lon":-0.13,"lat":51.51},
+ *  "weather":[{"id":500,
+ *      "main":"Rain",
+ *      "description":"light rain",
+ *      "icon":"10d"}],
+ *  "base":"stations",
+ *  "main":{"temp":278.53,
+ *      "pressure":1035,
+ *      "humidity":70,
+ *      "temp_min":277.15,
+ *      "temp_max":280.15},
+ *  "visibility":10000,
+ *  "wind":{"speed":3.1,"deg":220},
+ *  "clouds":{"all":40},
+ *  "dt":1483712400,
+ *  "sys":{"type":1,
+ *      "id":5091,
+ *      "message":0.003,
+ *      "country":"GB",
+ *      "sunrise":1483689879,
+ *      "sunset":1483718945},
+ *  "id":2643743,
+ * "name":"London",
+ * "cod":200
+ * }',
+ *
+ * 'protocol' => 'HTTP/1.1',
+ * 'status_message' => 'OK',
+ * 'headers' => array( 'server' => 'openresty',
+ * 'date' => 'Fri, 06 Jan 2017 15:04:49 GMT',
+ * 'content-type' => 'application/json; charset=utf-8',
+ * 'content-length' => '443', 'connection' => 'close',
+ * x-cache-key' => '/data/2.5/weather?APPID=9943aa3b9ab2a0c021b1afd4b779d53b&id=2643743',
+ * 'access-control-allow-origin' => '*',
+ * 'access-control-allow-credentials' => 'true',
+ * 'access-control-allow-methods' => 'GET, POST', ),
+ * 'code' => '200', )
+ */

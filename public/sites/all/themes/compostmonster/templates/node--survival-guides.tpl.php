@@ -100,7 +100,7 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
-        echo('hello, does this survival guide template work?');
+//        echo('hello, does this survival guide template work?');
 
     //    This is just a way to see all the fields for display in this content type.  Gotta style it all!
 
