@@ -334,6 +334,11 @@ function weather_contents($lat, $long)
         // Caching the results for 3 hours (or new configuration from admin/config/weather-data -> 'Cache Expiry' field.) and return.
         cache_set($cache_key, $weather_data, 'cache_weather', (time() + variable_get('weather_cache_expiry', WEATHER_CACHE_DEFAULT)));
         dpm('No cache data found. Adding cache to expire at ' . (time() + variable_get('weather_cache_expiry', WEATHER_CACHE_DEFAULT)) . ' unix time stamp.');
+
+        if ($weather_data['current_weather'] == 'Clouds') {
+            $weather_data['current_weather'] = 'Minimal Threat';
+        }
+
         return $weather_data;
     }
 }
