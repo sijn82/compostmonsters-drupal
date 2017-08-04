@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping ext="install" type="PHP" />
       <mapping pattern="_media-queries.scss" type="PLAIN_TEXT" />
       <mapping pattern="_media-queries" type="SCSS" />
     </extensionMap>
