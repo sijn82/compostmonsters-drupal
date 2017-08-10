@@ -1,566 +1,87 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*
+Error: Invalid CSS after "...   width: 600px": expected "{", was ";"
+        on line 42 of /var/www/public/sites/all/themes/compostmonster/sass/_google-maps.scss
+        from line 12 of /var/www/public/sites/all/themes/compostmonster/sass/screen.scss
 
-/* line 22, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
+37:         margin: 30px;
+38:     }
+39:     .field-name-field-monster-image {
+40:         img {
+41:             margin
+42:             width: 600px;
+43:             height: 460px;
+44:         }
+45:     }
+46: }
 
-/* line 24, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 2, ../sass/_default-variables.scss */
-body {
-  background-color: #fff;
-}
-
-/* line 7, ../sass/_default-variables.scss */
-.navbar {
-  margin-bottom: 0px;
-  border-width: 0px 0px 3px 0px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-color: #430517;
-}
-
-/* line 17, ../sass/_default-variables.scss */
-button.navbar-toggle {
-  margin-right: 30px;
-}
-
-/* line 21, ../sass/_default-variables.scss */
-a.name.navbar-brand {
-  background-color: #430517;
-  color: #45b52a;
-  font-family: "Mystery Quest";
-  padding-left: 15px;
-  margin-left: 0px;
-  /*border-top-left-radius: 4px;*/
-}
-
-/* line 30, ../sass/_default-variables.scss */
-.front h1.page-header {
-  display: none;
-}
-
-/* line 45, ../sass/_default-variables.scss */
-.container {
-  padding: 0px;
-}
-
-/* line 49, ../sass/_default-variables.scss */
-section.col-sm-12 {
-  padding: 0px;
-}
-
-/* line 53, ../sass/_default-variables.scss */
-.footer {
-  margin-top: 0px;
-  background-color: #430517;
-}
-
-@media (min-width: 768px) {
-  /* line 59, ../sass/_default-variables.scss */
-  .navbar > .container .navbar-brand {
-    margin-left: 0px;
-  }
-}
-/* line 64, ../sass/_default-variables.scss */
-#block-user-login {
-  margin-left: 40px;
-}
-/* line 68, ../sass/_default-variables.scss */
-#block-user-login li {
-  font-family: "Mystery Quest";
-}
-/* line 72, ../sass/_default-variables.scss */
-#block-user-login h2.block-title {
-  margin-top: 20px;
-}
-/* line 75, ../sass/_default-variables.scss */
-#block-user-login .form-control {
-  width: 40%;
-}
-
-/*#custom-jumbotron {
-	background-color: #ff33f3;
-	background-size: 100%;
-	background-position: center;
-	background-size: cover;
-	img.img-responsive {
-		margin: auto;
-	}
-}
+Backtrace:
+/var/www/public/sites/all/themes/compostmonster/sass/_google-maps.scss:42
+/var/www/public/sites/all/themes/compostmonster/sass/screen.scss:12
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
-/* line 1, ../sass/_homepage.scss */
-.know-your-enemy-homepage {
-  position: relative;
-}
-
-/* line 4, ../sass/_homepage.scss */
-.sidebar-overlay {
-  position: absolute;
-  top: 90px;
-  right: 5%;
-  height: 100%;
-}
-
-/* line 11, ../sass/_homepage.scss */
-#block-views-factfile-block-1 {
-  z-index: 5;
-  width: 100%;
-  height: auto;
-  outline: 4px dashed red;
-  padding: 10px;
-  margin-top: 15%;
-}
-/* line 18, ../sass/_homepage.scss */
-#block-views-factfile-block-1 h2 {
-  font-size: 2.5em;
-  color: white;
-  text-align: center;
-}
-/* line 23, ../sass/_homepage.scss */
-#block-views-factfile-block-1 ul.pager {
-  display: none;
-}
-/* line 27, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-1 .views-field-title {
-  text-align: center;
-  margin: 5% 0 10%;
-}
-/* line 30, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-1 .views-field-title a {
-  font-size: 1.5em;
-  color: lightgreen;
-}
-/* line 35, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-1 nav.slick__arrow {
-  padding-bottom: 10px;
-  position: initial;
-}
-/* line 40, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-1 nav button {
-  -webkit-transform: initial;
-  -moz-transform: initial;
-  -ms-transform: initial;
-  -o-transform: initial;
-  transform: initial;
-}
-
-/* line 56, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block {
-  z-index: 5;
-  width: 100%;
-  height: auto;
-  outline: 4px dashed red;
-  padding: 10px;
-  margin-top: 15%;
-}
-/* line 63, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block h2 {
-  font-size: 2.5em;
-  color: white;
-  text-align: center;
-}
-/* line 68, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block ul.pager {
-  display: none;
-}
-/* line 72, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 .views-field-title {
-  text-align: center;
-  margin: 5% 0 10%;
-}
-/* line 75, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 .views-field-title a {
-  font-size: 1.5em;
-  color: lightgreen;
-}
-/* line 80, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 nav.slick__arrow {
-  padding-bottom: 10px;
-  position: initial;
-}
-/* line 84, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-2 nav button {
-  -webkit-transform: initial;
-  -moz-transform: initial;
-  -ms-transform: initial;
-  -o-transform: initial;
-  transform: initial;
-}
-
-/* line 16, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors article.node-monster-factfile {
-  padding-bottom: 0;
-}
-/* line 23, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
-  margin-right: 5%;
-}
-/* line 26, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
-  margin-left: 5%;
-}
-/* line 31, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .slick-dots {
-  padding-bottom: 18px;
-}
-/* line 37, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .slick-slide img {
-  float: left;
-  border-left: 8px solid black;
-  border-right: 8px solid black;
-  margin-right: 20px;
-}
-/* line 47, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser {
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: center;
-  border-right: 8px solid black;
-}
-/* line 55, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser header {
-  padding-right: 20px;
-  padding-bottom: 10px;
-  clear: both;
-  float: right;
-  text-align: right;
-}
-/* line 66, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser header h2 {
-  font-size: 3em;
-}
-/* line 71, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-top img, .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-bottom img {
-  margin-left: 0;
-}
-/* line 75, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser .field-name-body {
-  margin-top: 20%;
-  margin-bottom: 1%;
-  margin-right: 20px;
-  text-align: center;
-  height: auto;
-}
-/* line 89, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li {
-  display: block;
-  clear: right;
-  text-align: center;
-}
-/* line 98, ../sass/_carousel_of_horrors.scss */
-.carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-add, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment_forbidden, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-comments {
-  display: none;
-}
-
-/* line 109, ../sass/_carousel_of_horrors.scss */
-.page-comment .region-content {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5px;
-}
-/* line 116, ../sass/_carousel_of_horrors.scss */
-.page-comment .comment .list-inline {
-  clear: left;
-  padding-left: 10px;
-  padding-bottom: 5px;
-}
-/* line 121, ../sass/_carousel_of_horrors.scss */
-.page-comment .comment .submitted {
-  padding-top: 10px;
-}
-/* line 124, ../sass/_carousel_of_horrors.scss */
-.page-comment .comment h3 .permalink {
-  display: none;
-}
-/* line 127, ../sass/_carousel_of_horrors.scss */
-.page-comment .comment p {
-  color: black;
-}
-
-/* line 134, ../sass/_carousel_of_horrors.scss */
-article.node-monster-factfile, article.node-survival-guides {
-  padding-bottom: 15px;
-}
-
-/* line 139, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile .field-label, .node-survival-guides .field-label {
-  font-family: "Fredericka the Great";
-  font-size: 1.5em;
-  font-weight: normal;
-  color: #000;
-  padding-bottom: 5px;
-  padding-top: 15px;
-}
-/* line 147, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile header, .node-survival-guides header {
-  text-align: center;
-}
-/* line 149, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile header span.submitted, .node-survival-guides header span.submitted {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-}
-/* line 155, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments, .node-survival-guides #comments {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5px;
-}
-/* line 160, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments h2, .node-survival-guides #comments h2 {
-  font-size: 1.5em;
-  font-family: "Fredericka the Great";
-  color: #000;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-/* line 167, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment, .node-survival-guides #comments .comment {
-  background-color: rgba(100, 100, 100, 0.1);
-  text-align: left;
-  padding-bottom: 5px;
-  padding-left: 10px;
-}
-/* line 173, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment .list-inline, .node-survival-guides #comments .comment .list-inline {
-  clear: left;
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-/* line 181, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment h3 .permalink, .node-survival-guides #comments .comment h3 .permalink {
-  display: none;
-}
-/* line 184, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment p, .node-survival-guides #comments .comment p {
-  color: black;
-  padding-bottom: 5px;
-}
-/* line 188, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .comment.well, .node-survival-guides #comments .comment.well {
-  margin-top: 10px;
-  margin-bottom: 0;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-/* line 198, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment, .node-survival-guides #comments .indented .comment {
-  background-color: rgba(200, 200, 200, 0.1);
-  text-align: right;
-  padding-top: 5px;
-  padding-right: 10px;
-}
-/* line 203, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment p, .node-survival-guides #comments .indented .comment p {
-  width: 50%;
-  float: right;
-  padding-bottom: 5px;
-  color: #2d6987;
-}
-/* line 209, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment .list-inline, .node-survival-guides #comments .indented .comment .list-inline {
-  clear: right;
-  padding-bottom: 10px;
-}
-/* line 218, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment.well, .node-survival-guides #comments .indented .comment.well {
-  margin-bottom: 0;
-  margin-top: 0px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-/* line 225, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile #comments .indented .comment .new, .node-survival-guides #comments .indented .comment .new {
-  color: orange;
-  font-family: "Fredericka the Great";
-}
-/* line 232, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile footer, .node-survival-guides footer {
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 5px;
-}
-/* line 236, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile footer .list-inline, .node-survival-guides footer .list-inline {
-  margin-left: 0;
-  border-bottom: 1px solid black;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-/* line 244, ../sass/_carousel_of_horrors.scss */
-.node-type-monster-factfile footer .field-name-field-tags, .node-survival-guides footer .field-name-field-tags {
-  display: inline-block;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-/* line 252, ../sass/_carousel_of_horrors.scss */
-.upper-film-reel-top {
-  height: 10px;
-  clear: both;
-  display: block;
-}
-
-/* line 260, ../sass/_carousel_of_horrors.scss */
-.lower-film-reel {
-  background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-bottom-alt.png");
-  height: 100px;
-  clear: both;
-  display: block;
-}
-
-/* line 268, ../sass/_carousel_of_horrors.scss */
-.lower-film-reel-beneath {
-  height: 100%;
-  background-color: black;
-}
-
-/* line 5, ../sass/_vive_la_resistance.scss */
-h1.page-header {
-  display: block;
-  margin-bottom: 0;
-  font-family: "Fredericka the Great";
-  font-size: 10.5em;
-  color: #000;
-}
-
-/* line 18, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font, .page-know-your-enemy .chalk-board-font {
-  background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
-  background-repeat: round;
-}
-/* line 21, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article, .page-know-your-enemy .chalk-board-font article {
-  padding-top: 2em;
-  padding-bottom: 1em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-}
-/* line 28, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article h2 a, .page-know-your-enemy .chalk-board-font article h2 a {
-  font-family: "Fredericka the Great";
-  font-size: 3em;
-  color: #fffff0;
-}
-/* line 35, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article footer .list-inline li, .page-know-your-enemy .chalk-board-font article footer .list-inline li {
-  font-family: "Fredericka the Great";
-}
-/* line 37, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article footer .list-inline li .node-readmore a, .page-know-your-enemy .chalk-board-font article footer .list-inline li .node-readmore a {
-  padding-top: 10px;
-}
-/* line 40, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment-add, .page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment_forbidden, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment-add, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment_forbidden {
-  display: none;
-}
-
-/* line 51, ../sass/_vive_la_resistance.scss */
-.node-type-monster-factfile .field-name-field-image-factfile img {
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 56, ../sass/_vive_la_resistance.scss */
-.node-type-monster-factfile .field-name-body {
-  padding-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  height: auto;
-}
-
-/* line 67, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-field-article-image img {
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 72, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body {
-  color: #000;
-  margin-left: 5em;
-  margin-right: 5em;
-}
-/* line 76, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body ul li {
-  list-style-position: inside;
-  list-style-type: circle;
-  padding-left: 3em;
-  padding-bottom: 5px;
-}
-/* line 84, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body h3 strong {
-  font-size: 2em;
-  font-family: "Fredericka the Great";
-  padding-top: 1.5em;
-  padding-bottom: 1em;
-  display: block;
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...   width: 600px\": expected \"{\", was \";\"\A         on line 42 of /var/www/public/sites/all/themes/compostmonster/sass/_google-maps.scss\A         from line 12 of /var/www/public/sites/all/themes/compostmonster/sass/screen.scss\A \A 37:         margin: 30px;\A 38:     }\A 39:     .field-name-field-monster-image {\A 40:         img {\A 41:             margin\A 42:             width: 600px;\A 43:             height: 460px;\A 44:         }\A 45:     }\A 46: }"; }

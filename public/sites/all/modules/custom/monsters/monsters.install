@@ -97,21 +97,32 @@
  		),
  	);
 
- 	$fields['monster_latitude'] = array(
- 		'field_name' => 'monster_latitude',
- 		'type' => 'number_float',
- 		'settings' => array(
- 			'max_length' => 20,
- 		),
- 	);
+     // Created lat/lon fields following a lynda tutorial but have now added an address field to improve usability.
+     // This field has been created within the admin panel on the content type for now.
 
- 	$fields['monster_longitude'] = array(
- 		'field_name' => 'monster_longitude',
- 		'type' => 'number_float',
- 		'settings' => array(
- 			'max_length' => 20,
- 		),
- 	);
+// 	$fields['monster_latitude'] = array(
+// 		'field_name' => 'monster_latitude',
+// 		'type' => 'number_float',
+// 		'settings' => array(
+// 			'max_length' => 20,
+// 		),
+// 	);
+//
+// 	$fields['monster_longitude'] = array(
+// 		'field_name' => 'monster_longitude',
+// 		'type' => 'number_float',
+// 		'settings' => array(
+// 			'max_length' => 20,
+// 		),
+// 	);
+
+     $fields['geo_location'] = array(
+       'field_name' => 'geo_location',
+       'type' => 'geofield',
+       'settings' => array(
+
+       )
+     );
 
  	foreach ($fields as $field) {
  		field_create_field($field);
@@ -168,47 +179,50 @@
 
  	);
 
- 	$instances['monster_latitude'] = array(
- 		'field_name' => 'monster_latitude',
- 		'label' => $t('Latitude'),
- 		'description' => $t('Signed degrees format (DDD.dddd).'),
- 		'widget' => array(
- 			'type' => 'text_textfield',
- 		),
- 		'required' => TRUE,
- 		'settings' => array(
- 			'text_processing' => 0,
- 		),
- 		// Option to hide display from user.
- 		/*
- 		'display' => array(
- 			'default' => array(
- 				'type' => 'hidden',
- 			),
- 		),
- 		*/
- 	);
+     // Created lat/lon fields following a lynda tutorial but have now added an address field to improve usability.
+     // This field has been created within the admin panel on the content type for now.
 
- 	$instances['monster_longitude'] = array(
- 		'field_name' => 'monster_longitude',
- 		'label' => $t('Longitude'),
- 		'description' => $t('Signed degrees format (DDD.dddd).'),
- 		'widget' => array(
- 			'type' => 'text_textfield',
- 		),
- 		'required' => TRUE,
- 		'settings' => array(
- 			'text_processing' => 0,
- 		),
- 		// Option to hide display from user.
- 		/*
- 		'display' => array(
- 			'default' => array(
- 				'type' => 'hidden',
- 			),
- 		),
- 		*/
- 	);
+// 	$instances['monster_latitude'] = array(
+// 		'field_name' => 'monster_latitude',
+// 		'label' => $t('Latitude'),
+// 		'description' => $t('Signed degrees format (DDD.dddd).'),
+// 		'widget' => array(
+// 			'type' => 'text_textfield',
+// 		),
+// 		'required' => TRUE,
+// 		'settings' => array(
+// 			'text_processing' => 0,
+// 		),
+// 		// Option to hide display from user.
+// 		/*
+// 		'display' => array(
+// 			'default' => array(
+// 				'type' => 'hidden',
+// 			),
+// 		),
+// 		*/
+// 	);
+//
+// 	$instances['monster_longitude'] = array(
+// 		'field_name' => 'monster_longitude',
+// 		'label' => $t('Longitude'),
+// 		'description' => $t('Signed degrees format (DDD.dddd).'),
+// 		'widget' => array(
+// 			'type' => 'text_textfield',
+// 		),
+// 		'required' => TRUE,
+// 		'settings' => array(
+// 			'text_processing' => 0,
+// 		),
+// 		// Option to hide display from user.
+// 		/*
+// 		'display' => array(
+// 			'default' => array(
+// 				'type' => 'hidden',
+// 			),
+// 		),
+// 		*/
+// 	);
 
  	foreach ($instances as $instance) {
  		$instance['entity_type'] = 'node';
