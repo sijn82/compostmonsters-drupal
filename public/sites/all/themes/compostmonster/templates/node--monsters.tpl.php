@@ -95,6 +95,7 @@
             <?php endif; ?>
         </header>
     <?php endif; ?>
+    <div>
     <?php
     // Hide comments, tags, and links now so that we can render them later.
     hide($content['comments']);
@@ -114,8 +115,15 @@
     //    $content['comments'];
     //    $content['links'];
 
-    ;    print render($content);
-    ?>
+//    ;
+       print render($content['field_monster_image']);
+   ?>
+    </div>
+    <div id='monsterReport'>
+        <?php print render($content); ?>
+    </div>
+</article>
+<div>
     <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
@@ -128,4 +136,4 @@
         </footer>
     <?php endif; ?>
     <?php print render($content['comments']); ?>
-</article>
+</div>

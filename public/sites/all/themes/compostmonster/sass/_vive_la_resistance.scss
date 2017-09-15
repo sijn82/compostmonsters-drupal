@@ -1,41 +1,69 @@
-$fredericka: 'Fredericka the Great';
-$resistance-title: 3em;
-
-
-    h1.page-header {
-        //background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
-        //background-repeat: round;
-        display: block;
-        margin-bottom: 0;
-        font-family: $fredericka;
-        font-size: $resistance-title * 3.5;
-        //color: #fffff0;
-        color: #000;
-    }
 
 .page-vive-la-resistance, .page-know-your-enemy {
 
 .chalk-board-font {
-    background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
-    background-repeat: round;
+    margin-top: $resistance-title - 1;
+    margin-bottom: $resistance-title - 2;
+    margin-left: $resistance-title / 2;
+    margin-right: $resistance-title / 2;
+
+    .view-header p {
+        font-family: $fredericka;
+        font-size: 30px;
+        line-height: 34px;
+        color: #000;
+        margin: 30px 60px;
+    }
+
+    .views-row-first article.node-teaser {
+        @include border-image-pinned-note-first;
+    }
+    .views-row-last article.node-teaser {
+        @include border-image-pinned-note-last;
+    }
+
     article {
+        //background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
+        background-repeat: round;
         //height: $resistance-title * 3;
         padding-top: $resistance-title - 1;
         padding-bottom: $resistance-title - 2;
         padding-left: $resistance-title / 2;
         padding-right: $resistance-title / 2;
         //padding-top: 15px;
+        &.node-teaser {
+            @include border-image-pinned-note;
+            margin-left: 10%;
+            margin-right:10%;
+        }
+
+
         h2 a {
-            font-family: $fredericka;
+            //font-family: $fredericka;
+            font-family: "Mystery Quest";
             font-size: $resistance-title;
-            color: #fffff0;
-            //color: #000;
+            //color: #fffff0;
+            //color: rgba(25, 148, 191, 1);
+            color: rgba(151, 181, 191, 1);
+            text-decoration: none;
+            &:hover {
+                color: rgba(199, 185, 80, 1);
+            }
+        }
+        p {
+            //font-family: 'Fredericka the Great';
+            font-family: $capriola;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000;
+            padding: 10px 10px;
         }
         footer {
             .list-inline li {
                 font-family: $fredericka;
-                .node-readmore a {
-                    padding-top: 10px;
+                &.node-readmore a {
+                    padding: 10px;
+                    font-size: 24px;
                 }
                 &.comment-add, &.comment_forbidden {
                     display: none;
@@ -46,48 +74,80 @@ $resistance-title: 3em;
 }
 }
 
-.node-type-monster-factfile {
-    .field-name-field-image-factfile {
-        img {
-            margin-left: auto;
-            margin-right: auto;
+.node-survival-guides {
+    &.node-teaser {
+        //@include border-image-frame;
+        .field-name-body {
+            padding-top: 10px;
         }
     }
-    .field-name-body {
-        padding-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        height: auto;
-    }
-}
 
-.node-survival-guides {
+
+    // Removes the attribute from /vive-la-resistance teaser view.
+    footer {
+        padding-top: 2%;
+        ul.list-inline {
+            border-bottom: none;
+        }
+
+    }
     .field-name-field-article-image {
         img {
             margin-left: auto;
             margin-right: auto;
+            @include border-image-frame;
+            border-width: 30px;
+            padding-top: 55px;
         }
     }
     .field-name-body {
         color: #000;
         margin-left: $resistance-title + 2;
         margin-right: $resistance-title + 2;
+        padding-top: 30px;
+        font-size: 20px;
+        font-family: "Fredericka the Great";
+        margin-left: 15%;
+        margin-right: 15%;
         ul li {
             // I may use a custom bullet point but for now circle will do.
-            list-style-position: inside;
-            list-style-type: circle;
-            padding-left: $resistance-title;
-            padding-bottom: 5px;
+            //list-style-position: inside;
+            //list-style-type: circle;
+            //padding-left: $resistance-title;
+            padding: 5px 120px 20px;
+            font-family: 'Capriola';
+            font-size: 20px;
+            line-height: 24px;
+            &:before {
+                content: ' * ';
+                padding-right: 0.5em;
+                color: rgba(204, 117, 120, 1);
+                font-family: 'Mystery Quest';
+                font-size: 36px;
+                line-height: 24px;
+
+            }
         }
         h3 {
             strong {
                 font-size: $resistance-title - 1;
-                font-family: $fredericka;
+                font-family: 'Mystery Quest';
+                color: rgba(204, 117, 120, 1);
                 padding-top: $resistance-title / 2;
                 padding-bottom: $resistance-title - 2;
                 display: block;
             }
+        }
+        p {
+            //font-size: 20px;
+            //font-family: "Fredericka the Great";
+            padding: 20px;
+            line-height: 26px;
+            strong {
+                color: rgba(204, 117, 120, 1);
+                font-weight: 500;
+            }
+
         }
     }
 }

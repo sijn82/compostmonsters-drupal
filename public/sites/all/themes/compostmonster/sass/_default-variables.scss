@@ -1,17 +1,360 @@
 
-body {
-	
-	background-color: #fff;
+// Variables
+
+// Fonts
+$fredericka: 'Fredericka the Great';
+$mystery: 'Mystery Quest';
+$capriola: 'Capriola';
+// Sizes
+$resistance-title: 3em;
+// Heights/Widths
+$nav-height: 75px;
+$nav-width: 75px;
+$nav-height-active: 150px;
+$nav-width-active: 150px;
+// Colours
+$pinkskin: rgba(247, 205, 169, 1);
+$darkerpinkskin: rgba(204, 117, 120, 1);
+$seablue: rgba(151, 181, 191, 1);
+$vegetationgreen: rgba(198, 184, 77, 1);
+$offwhite: rgba(241, 241, 240, 1);
+
+// Mixin's
+
+// These probably don't need to be a mixin's right now but I still find them more useful than as a class.
+
+@mixin active-navigation-link {
+	background-color: transparent;
+	height: $nav-height-active;
+	width: $nav-width-active;
+	background-repeat: round;
+	font-size: 0;
+}
+@mixin navigation-link {
+	background-color: transparent;
+	height: $nav-height;
+	width: $nav-width;
+	background-repeat: round;
+	font-size: 0;
+}
+@mixin navigation-link-home {
+	background-color: transparent;
+	height: $nav-height * 1.25;
+	width: $nav-width * 1.25;
+	background-repeat: round;
+	font-size: 0;
+	// This change is temporary while deciding on how the navbar should behave.
+	//position: fixed;
+	//position: absolute;
+	//left: 5%;
+}
+@mixin navigation-link-interactive {
+	animation: roll 5s infinite;
+	transform: rotate(30deg);
+	@keyframes roll {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+@mixin navigation-link-interactive-alt {
+	animation: roll-alt 6s infinite;
+	transform: rotate(-30deg);
+	@keyframes roll-alt {
+		0% {
+			transform: rotate(-0);
+		}
+		100% {
+			transform: rotate(-360deg);
+		}
+	}
+}
+@mixin navigation-link-interactive-alt-2 {
+	animation: roll-alt-2 7s infinite;
+	transform: rotate(90deg);
+	@keyframes roll-alt-2 {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 }
 
-.navbar {
-	margin-bottom: 0px;
-	border-width: 0px 0px 3px 0px;
-	border-top-right-radius: 0px;
-	border-top-left-radius:  0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	background-color: rgba(67, 5, 23, 1);
+@mixin border-image-frame {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	padding-top: 20px;
+	border-image-source:url('../stylesheets/border-images/know-your-enemy-border-image.png');
+	border-image-slice:65;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 48px;
+
+	-moz-border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') 65 75 round;
+	-webkit-border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') 65 75 round;
+	-o-border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') 65 75 round;
+	border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') 65 75 fill round;
+}
+
+@mixin border-image-pinned-note {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	padding-top: 70px;
+	padding-bottom: 50px;
+	border-image-source:url('../stylesheets/border-images/survival-guide-teaser.png');
+	border-image-slice:85;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 55px;
+
+	-moz-border-image: url('../stylesheets/border-images/survival-guide-teaser.png') 85 75 round;
+	-webkit-border-image: url('../stylesheets/border-images/survival-guide-teaser.png') 85 75 round;
+	-o-border-image: url('../stylesheets/border-images/survival-guide-teaser.png') 85 75 round;
+	border-image: url('../stylesheets/border-images/survival-guide-teaser.png') 85 75 fill round;
+}
+
+@mixin border-image-pinned-note-first {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	padding-bottom: 80px;
+	padding-top: 50px;
+	border-image-source:url('../stylesheets/border-images/survival-guide-teaser-first.png');
+	border-image-slice:85;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 50px;
+
+	-moz-border-image: url('../stylesheets/border-images/survival-guide-teaser-first.png') 85 75 round;
+	-webkit-border-image: url('../stylesheets/border-images/survival-guide-teaser-first.png') 85 75 round;
+	-o-border-image: url('../stylesheets/border-images/survival-guide-teaser-first.png') 85 75 round;
+	border-image: url('../stylesheets/border-images/survival-guide-teaser-first.png') 85 75 fill round;
+}
+
+@mixin border-image-pinned-note-last {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	border-image-source:url('../stylesheets/border-images/survival-guide-teaser-last.png');
+	border-image-slice:85;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 60px;
+
+	-moz-border-image: url('../stylesheets/border-images/survival-guide-teaser-last.png') 85 75 round;
+	-webkit-border-image: url('../stylesheets/border-images/survival-guide-teaser-last.png') 85 75 round;
+	-o-border-image: url('../stylesheets/border-images/survival-guide-teaser-last.png') 85 75 round;
+	border-image: url('../stylesheets/border-images/survival-guide-teaser-last.png') 85 75 fill round;
+}
+
+@mixin border-image-monster-map {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	//padding-bottom: 90px;
+	//padding-top: 90px;
+	border-image-source:url('../stylesheets/border-images/MonsterMapBorder.png');
+	border-image-slice:229;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 75px;
+
+	-moz-border-image: url('../stylesheets/border-images/MonsterMapBorder.png') 229 229 round;
+	-webkit-border-image: url('../stylesheets/border-images/MonsterMapBorder.png') 229 229 round;
+	-o-border-image: url('../stylesheets/border-images/MonsterMapBorder.png') 229 229 round;
+	border-image: url('../stylesheets/border-images/MonsterMapBorder.png') 229 229 fill round;
+}
+
+@mixin border-image-monster-map-alt {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	//padding-bottom: 90px;
+	//padding-top: 90px;
+	border-image-source:url('../stylesheets/border-images/MonsterMapBorderBlue.png');
+	border-image-slice:229;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 75px;
+
+	-moz-border-image: url('../stylesheets/border-images/MonsterMapBorderBlue.png') 229 229 round;
+	-webkit-border-image: url('../stylesheets/border-images/MonsterMapBorderBlue.png') 229 229 round;
+	-o-border-image: url('../stylesheets/border-images/MonsterMapBorderBlue.png') 229 229 round;
+	border-image: url('../stylesheets/border-images/MonsterMapBorderBlue.png') 229 229 fill round;
+}
+
+@mixin border-image-projector {
+	//border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	//padding-bottom: 90px;
+	//padding-top: 90px;
+	border-image-source:url('../stylesheets/border-images/projector.png');
+	border-image-slice:229;
+	//border-image-width:60;
+	//border-image-outset: 2 1 1 1;
+	border-style: solid;
+	border-image-repeat: round;
+	border-width: 75px;
+
+	-moz-border-image: url('../stylesheets/border-images/projector.png') 229 229 round;
+	-webkit-border-image: url('../stylesheets/border-images/projector.png') 229 229 round;
+	-o-border-image: url('../stylesheets/border-images/projector.png') 229 229 round;
+	border-image: url('../stylesheets/border-images/projector.png') 229 229 fill round;
+}
+
+@mixin border-image-wanted-poster {
+	////border-image: url('../stylesheets/border-images/know-your-enemy-border-image.png') round;
+	////padding-bottom: 90px;
+	////padding-top: 90px;
+	//border-image-source:url('../stylesheets/border-images/wantedPoster.png');
+	//border-image-slice:229;
+	////border-image-width:60;
+	////border-image-outset: 2 1 1 1;
+	//border-style: solid;
+	//border-image-repeat: round;
+	//border-width: 75px;
+    //
+	//-moz-border-image: url('../stylesheets/border-images/wantedPoster.png') 229 229 round;
+	//-webkit-border-image: url('../stylesheets/border-images/wantedPoster.png') 229 229 round;
+	//-o-border-image: url('../stylesheets/border-images/wantedPoster.png') 229 229 round;
+	//border-image: url('../stylesheets/border-images/wantedPoster.png') 229 229 fill round;
+
+	background-image: url('../stylesheets/border-images/wantedPoster.png');
+	background-repeat: round;
+}
+// Main Navigation
+
+#navbar.navbar-default {
+	&.navbar-fixed-top {
+		// Quick fix, should remove class if I'm keeping the change!
+		position: absolute;
+	}
+	// Clean up the secondary nav, to prevent primary styles carrying over.
+	nav ul.navbar-nav.secondary li {
+		&.first.leaf, &.last.leaf {
+			a:link, a:visited, a:active, a:focus {
+				background-image: none;
+				font-size: 16px;
+				color: #000;
+				width: auto;
+			}
+			a:hover {
+				color: rgba(151, 181, 191, 1);
+				background-color: transparent;
+			}
+		}
+	}
+	nav ul.navbar-nav {
+		// If navbar link is the active page
+		li.active-trail.active {
+			a#know-your-enemy-navigation {
+				background-image: url('navigation-images/eye_open_kye.png');
+				@include active-navigation-link;
+			}
+			a#map-of-encounters-navigation {
+				background-image: url('navigation-images/eye_open_moe.png');
+				@include active-navigation-link;
+			}
+			a#vive-la-resistance-navigation {
+				background-image: url('navigation-images/eye_open_vlr.png');
+				@include active-navigation-link;
+			}
+			a#homepage-navigation {
+				background-image: url('navigation-images/eye_open_home.png');
+				display: none;
+			}
+		}
+		// Otherwise start like this
+		li {
+			a#know-your-enemy-navigation {
+				background-image: url('navigation-images/eye_closed_kye.png');
+				@include navigation-link;
+				// Unless interacted with, then do this.
+				&:visited, &:hover, &:active, &:focus {
+					background-image: url('navigation-images/eye_open_kye.png');
+					@include navigation-link;
+					@include navigation-link-interactive;
+				}
+			}
+			a#map-of-encounters-navigation {
+				background-image: url('navigation-images/eye_closed_moe.png');
+				@include navigation-link;
+				//  Then do this if interacted with.
+				&:active, &:hover, &:focus, &:visited {
+					background-image: url('navigation-images/eye_open_moe.png');
+					@include navigation-link;
+					@include navigation-link-interactive-alt;
+				}
+			}
+			a#vive-la-resistance-navigation {
+				background-image: url('navigation-images/eye_closed_vlr.png');
+				@include navigation-link;
+				// If interacted with ... blah.
+				&:active, &:hover, &:focus, &:visited {
+					background-image: url('navigation-images/eye_open_vlr.png');
+					@include navigation-link;
+					@include navigation-link-interactive-alt-2;
+				}
+			}
+			a#homepage-navigation {
+				background-image: url('navigation-images/eye_open_home.png');
+				@include navigation-link-home;
+				// If interacted with ... blah.
+				&:active, &:hover, &:focus, &:visited {
+					background-image: url('navigation-images/eye_open_home.png');
+					@include navigation-link-home;
+					@include navigation-link-interactive-alt;
+				}
+			}
+		}
+	}
+}
+.row {
+	//margin-top: -16px;
+}
+.front .nav-tabs {
+	//margin-bottom: 0;
+	display: none;
+
+}
+.nav-tabs {
+	margin-bottom: 0;
+}
+
+// 199 185 80
+h1.page-header {
+	//background-image: url("/sites/default/files/site-design-images/photo_48238_20151031.jpg");
+	//background-repeat: round;
+	display: block;
+	margin-top: 215px;
+	margin-bottom: 0;
+	padding: 0px 30px 20px;
+	font-family: $fredericka;
+	font-size: $resistance-title * 2.5;
+	border-bottom: none;
+	color: darkgrey;
+	text-align: center;
+	//color: rgba(199, 185, 80, 1);
+}
+
+body {
+	background-color: #fff;
+	&.navbar-is-fixed-top {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	p {
+		color: #000;
+		line-height: 26px;
+	}
 }
 
 button.navbar-toggle {
@@ -75,7 +418,7 @@ section.col-sm-12 {
 	.form-control {
 		width: 40%;
 	}
-	
+
 }
 /*#custom-jumbotron {
 	background-color: #ff33f3;

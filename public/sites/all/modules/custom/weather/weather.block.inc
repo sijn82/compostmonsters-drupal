@@ -9,7 +9,7 @@ function weather_block_info()
     $blocks = [];
 
     $blocks['weather'] = [
-        'info' => t('London Weather'),
+        'info' => t('Capital Threat Level'),
     ];
     return $blocks;
 }
@@ -29,12 +29,12 @@ function weather_block_view($delta = '')
             $weather_cache_results = cache_get('weather_london', 'cache_weather');
 
             if (false === $weather_cache_results) {
-                $block['subject'] = t('Weather unavailable');
+                $block['subject'] = t('Threat Level unavailable');
                 $block['content'] = [
-                    '#markup' => '<p>' . t('Unable to retrieve data, please try again later.') . '</p>',
+                    '#markup' => '<p>' . t('Unable to retrieve data, prepare for the worst and please try again later.') . '</p>',
                 ];
             } else {
-                $block['subject'] = t('Weather in London');
+                $block['subject'] = t('Threat Level in London');
                 $block['content'] = [
                     '#theme' => 'weather_info',
                     '#temperature' => $weather_cache_results->data['temperature'],

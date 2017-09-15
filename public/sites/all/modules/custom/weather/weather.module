@@ -338,6 +338,21 @@ function weather_contents($lat, $long)
         if ($weather_data['current_weather'] == 'Clouds') {
             $weather_data['current_weather'] = 'Minimal Threat';
         }
+        if ($weather_data['current_weather'] == 'Rain') {
+            $weather_data['current_weather'] = 'Keep away from Greenhouses and Allotments';
+        }
+        if ($weather_data['current_weather'] == 'Thunderstorm') {
+            $weather_data['current_weather'] = 'Prepare for the Worst';
+        }
+        if ($weather_data['current_weather'] == 'Drizzle') {
+            $weather_data['current_weather'] = 'Mild Disturbance Brewing';
+        }
+        if ($weather_data['current_weather'] == 'Snow') {
+            $weather_data['current_weather'] = 'Frolic and play, you\'re safe';
+        }
+        if ($weather_data['current_weather'] == 'Atmosphere') {
+            $weather_data['current_weather'] = 'Is everyone ok, maybe a false alarm?';
+        }
 
         return $weather_data;
     }

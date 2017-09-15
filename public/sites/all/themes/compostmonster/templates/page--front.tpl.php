@@ -137,14 +137,13 @@
 <!--      <img typeof="foaf:Image" class="img-responsive"-->
 <!--           src="http://thecompostmonsters.local/sites/default/files/campingclem-oil-2400x1600.png"-->
 <!--           width="2400" height="1600" alt="">-->
-    <?php print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
-    <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
+<!--    --><?php //print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
 
-    <section<?php print $content_column_class; ?>>
+
+<!--    <section--><?php //print $content_column_class; ?><!-->
+<!--       Removed traditional argument for sidebars, increasing width of content while using sidebars to overlay content.-->
+      <?php $custom_display = " class='col-sm-10 homepage_main_content'"; ?>
+      <section<?php print $custom_display; ?>>
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -165,14 +164,20 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php print render($page['content']); ?>
-    </section>
+      <?php print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
+
+        <?php if (!empty($page['sidebar_first'])): ?>
+            <aside class="col-sm-3 primary-overlay" role="complementary">
+                <?php print render($page['sidebar_first']); ?>
+            </aside>  <!-- /#sidebar-first -->
+        <?php endif; ?>
 
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3 sidebar-overlay" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
+    </section>
 
   </div>
 </div>

@@ -29,6 +29,12 @@ regions[page_bottom]    = 'Page bottom'
 stylesheets[all][] = stylesheets/screen.css
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = js/compostmonster.js
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Fonts
 ;;;;;;;;;;;;;;;;;;;;;
 

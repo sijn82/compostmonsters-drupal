@@ -124,6 +124,13 @@
         <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
+    <!-- add projector audio effect for page load -->
+    <audio
+            id="projectorSoundEffect"
+            src="../../../../sites/default/files/projector_sounds/Slide_show_fan.wav"
+            autoplay="auto">
+    </audio>
+
     <div class="row">
 
         <?php if (!empty($page['sidebar_first'])): ?>

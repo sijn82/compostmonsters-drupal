@@ -48,11 +48,13 @@
 <?php if ($location != null) : ?>
     <p><strong>City:</strong> <?= $location; ?></p>
 <?php endif; ?>
-
-<p><strong>Current Weather:</strong> <?= $current_weather; ?></p>
-<p><strong>Temperature:</strong> <?= $temperature . " " . $temperature_suffix; ?></p>
-<p><strong>Humidity:</strong> <?= $humidity; ?>%</p>
-
+<!--Commented out temporarily while I play with the homepage layout.-->
+<!--<p><strong>Current Weather:</strong> --><?//= $current_weather; ?><!--</p>-->
+<!--<p><strong>Temperature:</strong> --><?//= $temperature . " " . $temperature_suffix; ?><!--</p>-->
+<!--<p><strong>Humidity:</strong> --><?//= $humidity; ?><!--%</p>-->
+<p><strong>Current Threat Level:</strong> <?= $current_weather; ?></p>
+<p><strong>Reported Sightings:</strong> <?= floor($temperature); ?></p>
+<p><strong>Witness Fatality Rate:</strong> <?= $humidity; ?>%</p>
 <?php if (true == $return_button) : ?>
     <a class="btn btn-default" href="/city-weather-data" role="button">Return</a>
 <?php endif; ?>
