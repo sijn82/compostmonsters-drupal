@@ -1,0 +1,25 @@
+.view-about {
+    .view-header {
+        text-align: center;
+        p {
+            font-family: $fredericka;
+            font-size: 30px;
+            line-height: 34px;
+            color: #000;
+            margin: 30px 12%;
+        }
+    }
+    .view-content {
+        //background-color: rgba(150, 150, 150, 0.2);
+        //background-image: url('../../../../../sites/default/files/default_images/Wall_panorama_iPhone_cropped.jpg');
+        //background-repeat: round;
+        //border-top: 3px solid darkgrey;
+
+        //  Padding -75px  when there is a background image behind the slideshow.
+        //  padding-top: 75px;
+        //  padding-bottom: 75px;
+        //  Otherwise we don't need as much of it.
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+}

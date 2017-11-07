@@ -134,12 +134,6 @@
   </header> <!-- /#page-header -->
 
   <div class="row">
-<!--      <img typeof="foaf:Image" class="img-responsive"-->
-<!--           src="http://thecompostmonsters.local/sites/default/files/campingclem-oil-2400x1600.png"-->
-<!--           width="2400" height="1600" alt="">-->
-<!--    --><?php //print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
-
-
 <!--    <section--><?php //print $content_column_class; ?><!-->
 <!--       Removed traditional argument for sidebars, increasing width of content while using sidebars to overlay content.-->
       <?php $custom_display = " class='col-sm-10 homepage_main_content'"; ?>
@@ -164,7 +158,8 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
+      <?php if($user->uid === 0) { print "<div class='logged-out'>"; }
+        print render($page['content']['system_main']['nodes'][3]['field_b_movie_poster']); ?>
 
         <?php if (!empty($page['sidebar_first'])): ?>
             <aside class="col-sm-3 primary-overlay" role="complementary">
@@ -177,13 +172,23 @@
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
+          <?php if($user->uid === 0) { print '</div>'; } ?>
     </section>
 
+      <?php if (!empty($page['footer'])): ?>
+          <footer class="footer col-sm-10 <?php
+              if($user->uid !== 0) {print 'display-none ';}
+              print $container_class; ?>">
+              <div>
+                  <div class="col-sm-5 col-sm-offset-1" >
+                      <?php print render($page['footer']['user_login']); ?>
+                  </div>
+                  <div class="col-sm-5">
+                      <?php print render($page['footer']['views_about-block_1']); ?>
+                  </div>
+          </footer>
+      <?php endif; ?>
   </div>
 </div>
 
-<?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
-<?php endif; ?>
+

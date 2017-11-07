@@ -13,11 +13,15 @@ $nav-width: 75px;
 $nav-height-active: 150px;
 $nav-width-active: 150px;
 // Colours
-$pinkskin: rgba(247, 205, 169, 1);
+$pinkskin: rgba(249, 228, 210, 1);
 $darkerpinkskin: rgba(204, 117, 120, 1);
 $seablue: rgba(151, 181, 191, 1);
 $vegetationgreen: rgba(198, 184, 77, 1);
 $offwhite: rgba(241, 241, 240, 1);
+// Classes
+.display-none {
+	display: none;
+}
 
 // Mixin's
 
@@ -230,6 +234,10 @@ $offwhite: rgba(241, 241, 240, 1);
 	background-image: url('../stylesheets/border-images/wantedPoster.png');
 	background-repeat: round;
 }
+@mixin background-image-incident-report {
+	background-image: url('../stylesheets/border-images/incident-report.png');
+	background-repeat: round;
+}
 // Main Navigation
 
 #navbar.navbar-default {
@@ -271,6 +279,10 @@ $offwhite: rgba(241, 241, 240, 1);
 				background-image: url('navigation-images/eye_open_home.png');
 				display: none;
 			}
+			a#about-navigation {
+				background-image: url('navigation-images/eye_open_about.png');
+				@include active-navigation-link;
+			}
 		}
 		// Otherwise start like this
 		li {
@@ -305,13 +317,23 @@ $offwhite: rgba(241, 241, 240, 1);
 				}
 			}
 			a#homepage-navigation {
-				background-image: url('navigation-images/eye_open_home.png');
-				@include navigation-link-home;
+				 background-image: url('navigation-images/eye_open_home.png');
+				 @include navigation-link;
+				 // If interacted with ... blah.
+				 &:active, &:hover, &:focus, &:visited {
+					 background-image: url('navigation-images/eye_open_home.png');
+					 @include navigation-link;
+					 @include navigation-link-interactive-alt;
+				 }
+			 }
+			a#about-navigation {
+				background-image: url('navigation-images/eye_closed_about.png');
+				@include navigation-link;
 				// If interacted with ... blah.
 				&:active, &:hover, &:focus, &:visited {
-					background-image: url('navigation-images/eye_open_home.png');
-					@include navigation-link-home;
-					@include navigation-link-interactive-alt;
+					background-image: url('navigation-images/eye_open_about.png');
+					@include navigation-link;
+					@include navigation-link-interactive-alt-2;
 				}
 			}
 		}
@@ -343,6 +365,12 @@ h1.page-header {
 	color: darkgrey;
 	text-align: center;
 	//color: rgba(199, 185, 80, 1);
+}
+
+h1.page-header.access-denied {
+	padding: 175px 30px 20px;
+	margin-top: 0px;
+
 }
 
 body {
@@ -389,34 +417,106 @@ a.name.navbar-brand {
 	padding: 0px;
 }
 
-section.col-sm-12 {
+section.col-sm-12, section.col-sm-10 {
 	padding:0px;
 }
 
 .footer {
 	margin-top: 0px;
-	background-color: rgba(67, 5, 23, 1);
+	background-color: $darkerpinkskin;
+	//background-color: $vegetationgreen;
+	float: none;
+	ul.list-inline li.comment_forbidden span {
+		padding-left: 9%;
+		padding-bottom: 10px;
+	}
 }
 
 @media (min-width: 768px) {
-.navbar > .container .navbar-brand {
-	margin-left: 0px;
+	.navbar > .container .navbar-brand {
+		margin-left: 0px;
+	}
 }
-}
+//@media (min-width: 768px) {
+//	footer.col-sm-10 {
+//		width: 83.33333333%;
+//	}
+//}
+.views-field-field-home-block-background-imag img {
 
+	-webkit-background-size: cover;
+	background-size: cover;
+	border-radius: 15px;
+	height: 277px;
+	width: 100%;
+	//padding: 15px;
+
+}
+#block-views-about-block-1 {
+	//float: right;
+	//min-width: 35%;
+	//max-width: 500px;
+
+	//padding: 25px 15px;
+	margin-left: 40px;
+	margin-right: 40px;
+	//background-image: url('../stylesheets/navigation-images/about.png');
+	//-webkit-background-size: cover;
+	//background-size: cover;
+	//border-radius: 15px;
+	//margin-left: 40px;
+	//margin-right: 40px;
+	h2.block-title {
+		display: none;
+	}
+	.views-field-title {
+		display: none;
+	}
+}
 #block-user-login {
 
+	background-color: $seablue;
+	//background-color: $vegetationgreen;
 	margin-left: 40px;
+	margin-right: 40px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 15px;
+	//max-width: 500px ;
+	//min-width: 35%;
+	//float: left;
 
 	li {
 		font-family: "Mystery Quest";
 	}
 
 	h2.block-title {
-		margin-top: 20px;
+		margin-bottom: 10px;
+		font-family: "Mystery Quest";
+		color: $pinkskin;
+		font-size: 24px;
+	}
+	form ul li a {
+		color: $pinkskin;
 	}
 	.form-control {
-		width: 40%;
+		//max-width: 400px;
+	}
+	.form-item .form-control {
+		margin-top: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	button.btn-primary {
+		margin-top: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background-color: $darkerpinkskin;
+		color: $pinkskin;
+		float: right;
 	}
 
 }

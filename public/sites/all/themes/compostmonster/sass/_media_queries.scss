@@ -75,32 +75,418 @@
 //        }
 //    }
 //}
+
+
+
+
 ///* Medium Devices, Desktops */
-//@media only screen and (max-width : 1200px) {
-//    #block-views-factfile-block-1 {
-//        h2 {
-//            font-size: 2em;
-//        }
-//        #slick-views-factfile-1 {
-//            .views-field-title {
-//                margin-top: 10%;
-//                a {
-//                    font-size: 1em;
-//                }
-//            }
-//            nav button {
-//                margin-top: 15%;
-//                position: absolute;
-//                &.slick-next {
-//                    margin-right: 20%;
-//                }
-//                &.slick-prev {
-//                    margin-left: 20%;
-//                }
-//            }
-//        }
-//    }
-//}
+@media only screen and (max-width : 1580px) {
+    .col-sm-10 {
+        width: 100%;
+    }
+    .primary-overlay .block-weather {
+        p strong {
+            font-size: 1.25em;
+        }
+    }
+    //#block-weather-weather, #block-views-factfile-block-1, #block-views-vive-la-revolution-block {
+    //         h2.block-title {
+    //             font-size: 2em;
+    //         }
+    //         #slick-views-factfile-15, #slick-views-vive-la-revolution-16 {
+    //             .views-field-title a {
+    //                 font-size: 1.25em;
+    //             }
+    //         }
+    //     }
+    #block-block-1 {
+        &.poster-title {
+            h1 {
+                font-size: 6em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1380px) {
+    #block-weather-weather, #block-views-factfile-block-1, #block-views-vive-la-revolution-block {
+        h2.block-title {
+            font-size: 2em;
+        }
+        #slick-views-factfile-15, #slick-views-vive-la-revolution-16 {
+            .views-field-title a {
+                font-size: 1.25em;
+            }
+        }
+    }
+    #block-block-1 {
+        &.poster-title {
+            h1 {
+                font-size: 5.5em;
+            }
+        }
+    }
+    .page-know-your-enemy .carouselOfHorrors#slick-views-factfile-1 {
+        margin-left: 0;
+        margin-right: 0;
+        nav button {
+            &.slick-next {
+                right: 0%;
+            }
+            &.slick-prev {
+                left: 0%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+    #block-weather-weather, #block-views-factfile-block-1, #block-views-vive-la-revolution-block {
+        h2.block-title {
+            font-size: 1.75em;
+        }
+        //#slick-views-factfile-15, #slick-views-vive-la-revolution-16 {
+        //    .views-field-title a {
+        //        font-size: 1.25em;
+        //    }
+        //}
+    }
+    #block-block-1 {
+        &.poster-title {
+            h1 {
+                font-size: 5em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .primary-overlay .block-weather {
+        h2.block-title {
+            font-size: 1.75em;
+        }
+        p {
+            font-size: 1em;
+            padding: 0;
+        }
+    }
+    .view-factfile {
+        div.view-header p {
+            margin: 30px;
+        }
+        div.view-content {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    }
+    div.carouselOfHorrors#slick-views-factfile-1 {
+        margin-left: 0;
+        margin-right: 0;
+        nav button {
+            &.slick-next {
+                right: 4%;
+            }
+            &.slick-prev {
+                left: 4%;
+            }
+        }
+    }
+    .carouselOfHorrors .node-monster-factfile.node-teaser div.field-name-body {
+        margin-top: 0;
+    }
+    .carouselOfHorrors .slick-slide img.img-responsive {
+        margin-left: 0;
+        margin-right: 0;
+        float: none;
+    }
+    .view-vive-la-revolution.chalk-board-font {
+        margin-left: 0;
+        margin-right: 0;
+        .view-header p {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .node-survival-guides, .node-about {
+        div.field-name-body {
+            margin-left: 6%;
+            margin-right: 6%;
+            ul li {
+                padding: 5px 20px 20px 60px;
+                //font-family: 'Capriola';
+                //font-size: 16px;
+                //line-height: 24px;
+                &:before {
+                    //content: ' * ';
+                    //padding-right: 0.5em;
+                    //color: rgba(204, 117, 120, 1);
+                    //font-family: 'Mystery Quest';
+                    //font-size: 28px;
+                    //line-height: 24px;
+
+                }
+            }
+        }
+    }
+    div.view-monster-map-of-encounters {
+        margin-left: 0;
+        margin-right: 0;
+        #ip-geoloc-map-of-view-monster_map_of_encounters-page {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+    //#block-weather-weather {
+    //    display: none;
+    //}
+}
+
+@media only screen and (max-width : 1080px) {
+    //#block-weather-weather {
+    //    display: none;
+    //}
+    .col-sm-3 {
+        width: 30%;
+    }
+    #block-views-factfile-block-1, #block-views-vive-la-revolution-block {
+        h2.block-title {
+            font-size: 1.5em;
+        }
+        //p strong {
+        //    font-size: 1em;
+        //}
+        #slick-views-factfile-15 {
+            .views-field-title a {
+                font-size: 1.25em;
+            }
+            .slick-slider {
+                //margin-bottom: 0px;
+            }
+        }
+    }
+    //#block-block-1 {
+    //    &.poster-title {
+    //        h1 {
+    //            font-size: 5.5em;
+    //        }
+    //    }
+    //}
+}
+
+//* Small Devices, Tablets */
+@media only screen and (max-height: 780px) {
+    #block-weather-weather {
+        display: none;
+    }
+    #block-views-factfile-block-1, #block-views-vive-la-revolution-block {
+        h2.block-title {
+            font-size: 2em;
+            padding-bottom: 10px;
+        }
+        .field-content {
+            padding-top: 0px;
+        }
+        //p strong {
+        //    font-size: 1em;
+        //}
+        #slick-views-factfile-15 {
+            .views-field-title a {
+                font-size: 1.25em;
+            }
+            .slick-slider {
+                //margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+    //div.navbar-collapse[aria-expanded="true"] {
+        #block-block-1 {
+            padding-top: 50px;
+            &.poster-title {
+                h1 {
+                    font-size: 4.5em;
+                }
+            }
+        }
+    //}
+    #block-weather-weather {
+        display: none;
+    }
+    .field-name-field-b-movie-poster {
+        overflow: hidden;
+        img {
+            min-width: 152%;
+        }
+    }
+    .sidebar-overlay {
+        display: none;
+    }
+    .views-field.views-field-field-home-block-background-imag {
+        margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width : 480px) {
+    h1.page-header {
+        font-size: 3.5em;
+    }
+    .view-vive-la-revolution, .view-about, .view-factfile, .view-monster-map-of-encounters {
+        .view-header p {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        #ip-geoloc-map-of-view-monster_map_of_encounters-page {
+            border-width: 40px;
+        }
+    }
+    .node-survival-guides, .node-about {
+        div.field-name-body {
+            ul li {
+                // I may use a custom bullet point but for now circle will do.
+                //list-style-position: inside;
+                //list-style-type: circle;
+                //padding-left: $resistance-title;
+                padding: 5px 20px 20px;
+                font-family: 'Capriola';
+                font-size: 16px;
+                line-height: 24px;
+                &:before {
+                    content: ' * ';
+                    padding-right: 0.5em;
+                    color: rgba(204, 117, 120, 1);
+                    font-family: 'Mystery Quest';
+                    font-size: 28px;
+                    line-height: 24px;
+
+                }
+            }
+        }
+    }
+    .page-vive-la-resistance, .page-know-your-enemy, .page-about {
+
+        div.chalk-board-font {
+            margin-left: 0;
+            margin-right: 0;
+            .views-row-first article.node-teaser {
+                padding-bottom: 120px;
+            }
+            article.node-survival-guides, article.node-about {
+                padding-left:0;
+                padding-right:0;
+                h2 a {
+                font-size: 2em;
+                }
+                .field-name-body {
+                    margin-left:0;
+                    margin-right:0;
+                    p {
+                        padding-top: 10px;
+                    }
+                }
+            }
+            }
+        }
+            // all commented out code are the existing styles and should be deleted afterwards!
+    div.carouselOfHorrors {
+        margin-left: 0;
+        margin-right: 0;
+        article.node-monster-factfile {
+            //padding-bottom: 0;
+        }
+        //background-color: white;
+        &#slick-views-factfile-1 {
+            //@include border-image-projector;
+            //-webkit-border-radius: 35px;
+            //-moz-border-radius: 35px;
+            //border-radius: 35px;
+            //background-color: rgba(255, 255, 255, 0.5);
+            //margin-top: 30px;
+            border-width: 0;
+            nav button {
+                &.slick-next {
+                    display: none !important;
+                }
+                &.slick-prev {
+                    display: none !important;
+                }
+            }
+        }
+        .slick-dots {
+            //padding-bottom: 18px;
+        }
+        .slick-slide {
+            img {
+                //float: left;
+                //clear: left;
+                //margin-right: 20px;
+                margin-bottom: 5px;
+                //margin-top: 35px;
+                //margin-left: 15px;
+                //border: 2px solid darkgrey;
+            }
+        }
+        article.node-monster-factfile.node-teaser {
+            margin-left: 0;
+            margin-right: 0;
+            //text-align: center;
+            //border-style: solid;
+            //border-image-repeat: round;
+            //border-width: 50px 20px;
+            //-moz-border-image: url('../../../themes/compostmonster/stylesheets/border-images/border-image-slide-full.png') 50 20 round;
+            //-webkit-border-image: url('../../../themes/compostmonster/stylesheets/border-images/border-image-slide-full.png') 50 20 round;
+            //-o-border-image: url('../../../themes/compostmonster/stylesheets/border-images/border-image-slide-full.png') 50 20 round;
+            //border-image: url('../../../themes/compostmonster/stylesheets/border-images/border-image-slide-full.png') 50 20 fill round;
+            header {
+                //padding-right: 20px;
+                //padding-bottom: 10px;
+                //margin-top: 35px;
+                //clear: both;
+                //float: right;
+                //text-align: right;
+                h2 {
+                    //font-size: 2.5em;
+                    //font-family: 'Mystery Quest';
+                }
+
+            }
+            .field-name-field-filmstrip-top img, .field-name-field-filmstrip-bottom img {
+                //margin-left: 0;
+            }
+
+            .field-name-body {
+                //margin-top: 10%;
+                //margin-bottom: 1%;
+                margin-right: 0;
+                padding-top: 15px;
+                //text-align: center;
+                //height: auto;
+                //font-family: "Fredericka the Great";
+                //color: #000;
+                //font-size: 20px;
+            }
+            footer {
+                .list-inline li {
+                    //display: block;
+                    //clear: right;
+                    //text-align: center;
+                    //padding-bottom: 20px;
+                    .node-readmore a {
+
+                    }
+                    &.comment-add, &.comment_forbidden, &.comment-comments {
+                        //display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}
 ////
 /////* Small Devices, Tablets */
 ////@media only screen and (max-width : 768px) {

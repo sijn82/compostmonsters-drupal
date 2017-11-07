@@ -16,6 +16,14 @@
   //height: 100%;
 }
 
+.field-name-field-b-movie-poster img {
+  height: 97vh;
+}
+
+.logged-out img {
+  height: 100vh;
+}
+
 .primary-overlay {
   position: absolute;
   top: 5%;
@@ -31,12 +39,13 @@
     }
     h2 {
       font-family: 'Mystery Quest';
-      font-size: 48px;
+      font-size: 4em;
     }
     h1 {
       font-family: 'Mystery Quest';
-      font-size: 96px;
-      color: mediumseagreen;
+      font-size: 8em;
+      //color: mediumseagreen;
+      color: $vegetationgreen;
     }
   }
   // Styling for the weather module.  Temporary location as I'm just changing its appearance for the homepage.
@@ -60,12 +69,12 @@
     p {
       position: relative;
       padding: 10px 20px 0px;
-      color: white;
+      color: $darkerpinkskin;
       font-family: 'Fredericka the Great';
       strong {
         font-family: "Mystery Quest";
         font-size: 1.5em;
-        color: mediumseagreen;
+        color: #231427;
         display: block;
       }
     }
@@ -155,15 +164,19 @@ header#navbar {
   ul.pager {
     display: none;
   }
-  #slick-views-factfile-15 {
+  #slick-views-factfile-6 {
     .views-field-title {
       text-align: center;
       //margin: 5% 0 10%;
       //padding-bottom: 30px;
       a {
         font-size: 1.5em;
-        color: mediumseagreen;
+        color: #231427;
         font-family: 'Mystery Quest';
+        text-decoration: none;
+        &:hover {
+          color: $vegetationgreen;
+        }
       }
     }
     nav.slick__arrow {
@@ -217,15 +230,18 @@ header#navbar {
   ul.pager {
     display: none;
   }
-  #slick-views-vive-la-revolution-16 {
+  #slick-views-vive-la-revolution-7 {
     .views-field-title {
       text-align: center;
       //margin: 5% 0 10%;
       a {
-        padding-top: 20px;
         font-size: 1.5em;
-        color: mediumseagreen;
+        color: #231427;
         font-family: 'Mystery Quest';
+        text-decoration: none;
+        &:hover {
+          color: $vegetationgreen;
+        }
       }
     }
     nav.slick__arrow {

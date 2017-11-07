@@ -339,7 +339,7 @@ function weather_contents($lat, $long)
             $weather_data['current_weather'] = 'Minimal Threat';
         }
         if ($weather_data['current_weather'] == 'Rain') {
-            $weather_data['current_weather'] = 'Keep away from Greenhouses and Allotments';
+            $weather_data['current_weather'] = 'Keep away from Allotments';
         }
         if ($weather_data['current_weather'] == 'Thunderstorm') {
             $weather_data['current_weather'] = 'Prepare for the Worst';
@@ -353,7 +353,15 @@ function weather_contents($lat, $long)
         if ($weather_data['current_weather'] == 'Atmosphere') {
             $weather_data['current_weather'] = 'Is everyone ok, maybe a false alarm?';
         }
-
+        if ($weather_data['current_weather'] == 'Clear') {
+            $weather_data['current_weather'] = 'All looks clear for now.';
+        }
+        if ($weather_data['current_weather'] == 'Extreme') {
+            $weather_data['current_weather'] = 'Avoid Greenhouses at all costs!';
+        }
+        if ($weather_data['current_weather'] == 'Additional') {
+            $weather_data['current_weather'] = 'Something is going on, stay aware.';
+        }
         return $weather_data;
     }
 }

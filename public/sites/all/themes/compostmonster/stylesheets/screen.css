@@ -67,23 +67,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 236, ../sass/_default-variables.scss */
+/* line 22, ../sass/_default-variables.scss */
+.display-none {
+  display: none;
+}
+
+/* line 244, ../sass/_default-variables.scss */
 #navbar.navbar-default.navbar-fixed-top {
   position: absolute;
 }
-/* line 243, ../sass/_default-variables.scss */
+/* line 251, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav.secondary li.first.leaf a:link, #navbar.navbar-default nav ul.navbar-nav.secondary li.first.leaf a:visited, #navbar.navbar-default nav ul.navbar-nav.secondary li.first.leaf a:active, #navbar.navbar-default nav ul.navbar-nav.secondary li.first.leaf a:focus, #navbar.navbar-default nav ul.navbar-nav.secondary li.last.leaf a:link, #navbar.navbar-default nav ul.navbar-nav.secondary li.last.leaf a:visited, #navbar.navbar-default nav ul.navbar-nav.secondary li.last.leaf a:active, #navbar.navbar-default nav ul.navbar-nav.secondary li.last.leaf a:focus {
   background-image: none;
   font-size: 16px;
   color: #000;
   width: auto;
 }
-/* line 249, ../sass/_default-variables.scss */
+/* line 257, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav.secondary li.first.leaf a:hover, #navbar.navbar-default nav ul.navbar-nav.secondary li.last.leaf a:hover {
   color: #97b5bf;
   background-color: transparent;
 }
-/* line 258, ../sass/_default-variables.scss */
+/* line 266, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li.active-trail.active a#know-your-enemy-navigation {
   background-image: url("navigation-images/eye_open_kye.png");
   background-color: transparent;
@@ -92,7 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: round;
   font-size: 0;
 }
-/* line 262, ../sass/_default-variables.scss */
+/* line 270, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li.active-trail.active a#map-of-encounters-navigation {
   background-image: url("navigation-images/eye_open_moe.png");
   background-color: transparent;
@@ -101,7 +106,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: round;
   font-size: 0;
 }
-/* line 266, ../sass/_default-variables.scss */
+/* line 274, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li.active-trail.active a#vive-la-resistance-navigation {
   background-image: url("navigation-images/eye_open_vlr.png");
   background-color: transparent;
@@ -110,12 +115,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: round;
   font-size: 0;
 }
-/* line 270, ../sass/_default-variables.scss */
+/* line 278, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li.active-trail.active a#homepage-navigation {
   background-image: url("navigation-images/eye_open_home.png");
   display: none;
 }
-/* line 277, ../sass/_default-variables.scss */
+/* line 282, ../sass/_default-variables.scss */
+#navbar.navbar-default nav ul.navbar-nav li.active-trail.active a#about-navigation {
+  background-image: url("navigation-images/eye_open_about.png");
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+  background-repeat: round;
+  font-size: 0;
+}
+/* line 289, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#know-your-enemy-navigation {
   background-image: url("navigation-images/eye_closed_kye.png");
   background-color: transparent;
@@ -124,7 +138,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: round;
   font-size: 0;
 }
-/* line 281, ../sass/_default-variables.scss */
+/* line 293, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#know-your-enemy-navigation:visited, #navbar.navbar-default nav ul.navbar-nav li a#know-your-enemy-navigation:hover, #navbar.navbar-default nav ul.navbar-nav li a#know-your-enemy-navigation:active, #navbar.navbar-default nav ul.navbar-nav li a#know-your-enemy-navigation:focus {
   background-image: url("navigation-images/eye_open_kye.png");
   background-color: transparent;
@@ -143,7 +157,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(360deg);
   }
 }
-/* line 287, ../sass/_default-variables.scss */
+/* line 299, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#map-of-encounters-navigation {
   background-image: url("navigation-images/eye_closed_moe.png");
   background-color: transparent;
@@ -152,7 +166,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: round;
   font-size: 0;
 }
-/* line 291, ../sass/_default-variables.scss */
+/* line 303, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#map-of-encounters-navigation:active, #navbar.navbar-default nav ul.navbar-nav li a#map-of-encounters-navigation:hover, #navbar.navbar-default nav ul.navbar-nav li a#map-of-encounters-navigation:focus, #navbar.navbar-default nav ul.navbar-nav li a#map-of-encounters-navigation:visited {
   background-image: url("navigation-images/eye_open_moe.png");
   background-color: transparent;
@@ -171,7 +185,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(-360deg);
   }
 }
-/* line 297, ../sass/_default-variables.scss */
+/* line 309, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#vive-la-resistance-navigation {
   background-image: url("navigation-images/eye_closed_vlr.png");
   background-color: transparent;
@@ -180,7 +194,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: round;
   font-size: 0;
 }
-/* line 301, ../sass/_default-variables.scss */
+/* line 313, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#vive-la-resistance-navigation:active, #navbar.navbar-default nav ul.navbar-nav li a#vive-la-resistance-navigation:hover, #navbar.navbar-default nav ul.navbar-nav li a#vive-la-resistance-navigation:focus, #navbar.navbar-default nav ul.navbar-nav li a#vive-la-resistance-navigation:visited {
   background-image: url("navigation-images/eye_open_vlr.png");
   background-color: transparent;
@@ -199,21 +213,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(360deg);
   }
 }
-/* line 307, ../sass/_default-variables.scss */
+/* line 319, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#homepage-navigation {
   background-image: url("navigation-images/eye_open_home.png");
   background-color: transparent;
-  height: 93.75px;
-  width: 93.75px;
+  height: 75px;
+  width: 75px;
   background-repeat: round;
   font-size: 0;
 }
-/* line 311, ../sass/_default-variables.scss */
+/* line 323, ../sass/_default-variables.scss */
 #navbar.navbar-default nav ul.navbar-nav li a#homepage-navigation:active, #navbar.navbar-default nav ul.navbar-nav li a#homepage-navigation:hover, #navbar.navbar-default nav ul.navbar-nav li a#homepage-navigation:focus, #navbar.navbar-default nav ul.navbar-nav li a#homepage-navigation:visited {
   background-image: url("navigation-images/eye_open_home.png");
   background-color: transparent;
-  height: 93.75px;
-  width: 93.75px;
+  height: 75px;
+  width: 75px;
   background-repeat: round;
   font-size: 0;
   animation: roll-alt 6s infinite;
@@ -227,17 +241,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(-360deg);
   }
 }
-/* line 323, ../sass/_default-variables.scss */
+/* line 329, ../sass/_default-variables.scss */
+#navbar.navbar-default nav ul.navbar-nav li a#about-navigation {
+  background-image: url("navigation-images/eye_closed_about.png");
+  background-color: transparent;
+  height: 75px;
+  width: 75px;
+  background-repeat: round;
+  font-size: 0;
+}
+/* line 333, ../sass/_default-variables.scss */
+#navbar.navbar-default nav ul.navbar-nav li a#about-navigation:active, #navbar.navbar-default nav ul.navbar-nav li a#about-navigation:hover, #navbar.navbar-default nav ul.navbar-nav li a#about-navigation:focus, #navbar.navbar-default nav ul.navbar-nav li a#about-navigation:visited {
+  background-image: url("navigation-images/eye_open_about.png");
+  background-color: transparent;
+  height: 75px;
+  width: 75px;
+  background-repeat: round;
+  font-size: 0;
+  animation: roll-alt-2 7s infinite;
+  transform: rotate(90deg);
+}
+@keyframes roll-alt-2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 345, ../sass/_default-variables.scss */
 .front .nav-tabs {
   display: none;
 }
 
-/* line 328, ../sass/_default-variables.scss */
+/* line 350, ../sass/_default-variables.scss */
 .nav-tabs {
   margin-bottom: 0;
 }
 
-/* line 333, ../sass/_default-variables.scss */
+/* line 355, ../sass/_default-variables.scss */
 h1.page-header {
   display: block;
   margin-top: 215px;
@@ -250,27 +292,33 @@ h1.page-header {
   text-align: center;
 }
 
-/* line 348, ../sass/_default-variables.scss */
+/* line 370, ../sass/_default-variables.scss */
+h1.page-header.access-denied {
+  padding: 175px 30px 20px;
+  margin-top: 0px;
+}
+
+/* line 376, ../sass/_default-variables.scss */
 body {
   background-color: #fff;
 }
-/* line 350, ../sass/_default-variables.scss */
+/* line 378, ../sass/_default-variables.scss */
 body.navbar-is-fixed-top {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 354, ../sass/_default-variables.scss */
+/* line 382, ../sass/_default-variables.scss */
 body p {
   color: #000;
   line-height: 26px;
 }
 
-/* line 360, ../sass/_default-variables.scss */
+/* line 388, ../sass/_default-variables.scss */
 button.navbar-toggle {
   margin-right: 30px;
 }
 
-/* line 364, ../sass/_default-variables.scss */
+/* line 392, ../sass/_default-variables.scss */
 a.name.navbar-brand {
   background-color: #430517;
   color: #45b52a;
@@ -280,48 +328,103 @@ a.name.navbar-brand {
   /*border-top-left-radius: 4px;*/
 }
 
-/* line 373, ../sass/_default-variables.scss */
+/* line 401, ../sass/_default-variables.scss */
 .front h1.page-header {
   display: none;
 }
 
-/* line 388, ../sass/_default-variables.scss */
+/* line 416, ../sass/_default-variables.scss */
 .container {
   padding: 0px;
 }
 
-/* line 392, ../sass/_default-variables.scss */
-section.col-sm-12 {
+/* line 420, ../sass/_default-variables.scss */
+section.col-sm-12, section.col-sm-10 {
   padding: 0px;
 }
 
-/* line 396, ../sass/_default-variables.scss */
+/* line 424, ../sass/_default-variables.scss */
 .footer {
   margin-top: 0px;
-  background-color: #430517;
+  background-color: #cc7578;
+  float: none;
+}
+/* line 429, ../sass/_default-variables.scss */
+.footer ul.list-inline li.comment_forbidden span {
+  padding-left: 9%;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-  /* line 402, ../sass/_default-variables.scss */
+  /* line 436, ../sass/_default-variables.scss */
   .navbar > .container .navbar-brand {
     margin-left: 0px;
   }
 }
-/* line 407, ../sass/_default-variables.scss */
-#block-user-login {
-  margin-left: 40px;
+/* line 445, ../sass/_default-variables.scss */
+.views-field-field-home-block-background-imag img {
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-radius: 15px;
+  height: 277px;
+  width: 100%;
 }
-/* line 411, ../sass/_default-variables.scss */
+
+/* line 455, ../sass/_default-variables.scss */
+#block-views-about-block-1 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+/* line 469, ../sass/_default-variables.scss */
+#block-views-about-block-1 h2.block-title {
+  display: none;
+}
+/* line 472, ../sass/_default-variables.scss */
+#block-views-about-block-1 .views-field-title {
+  display: none;
+}
+
+/* line 476, ../sass/_default-variables.scss */
+#block-user-login {
+  background-color: #97b5bf;
+  margin-left: 40px;
+  margin-right: 40px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  padding: 15px;
+}
+/* line 490, ../sass/_default-variables.scss */
 #block-user-login li {
   font-family: "Mystery Quest";
 }
-/* line 415, ../sass/_default-variables.scss */
+/* line 494, ../sass/_default-variables.scss */
 #block-user-login h2.block-title {
-  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Mystery Quest";
+  color: #f9e4d2;
+  font-size: 24px;
 }
-/* line 418, ../sass/_default-variables.scss */
-#block-user-login .form-control {
-  width: 40%;
+/* line 500, ../sass/_default-variables.scss */
+#block-user-login form ul li a {
+  color: #f9e4d2;
+}
+/* line 506, ../sass/_default-variables.scss */
+#block-user-login .form-item .form-control {
+  margin-top: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 512, ../sass/_default-variables.scss */
+#block-user-login button.btn-primary {
+  margin-top: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #cc7578;
+  color: #f9e4d2;
+  float: right;
 }
 
 /*#custom-jumbotron {
@@ -353,33 +456,43 @@ section.col-sm-12 {
 }
 
 /* line 19, ../sass/_homepage.scss */
+.field-name-field-b-movie-poster img {
+  height: 97vh;
+}
+
+/* line 23, ../sass/_homepage.scss */
+.logged-out img {
+  height: 100vh;
+}
+
+/* line 27, ../sass/_homepage.scss */
 .primary-overlay {
   position: absolute;
   top: 5%;
   left: 5%;
   height: 95%;
 }
-/* line 24, ../sass/_homepage.scss */
+/* line 32, ../sass/_homepage.scss */
 .primary-overlay .region-sidebar-first {
   margin-top: 15%;
   background-color: transparent;
 }
-/* line 29, ../sass/_homepage.scss */
+/* line 37, ../sass/_homepage.scss */
 .primary-overlay .poster-title .block-title {
   display: none;
 }
-/* line 32, ../sass/_homepage.scss */
+/* line 40, ../sass/_homepage.scss */
 .primary-overlay .poster-title h2 {
   font-family: 'Mystery Quest';
-  font-size: 48px;
+  font-size: 4em;
 }
-/* line 36, ../sass/_homepage.scss */
+/* line 44, ../sass/_homepage.scss */
 .primary-overlay .poster-title h1 {
   font-family: 'Mystery Quest';
-  font-size: 96px;
-  color: mediumseagreen;
+  font-size: 8em;
+  color: #c6b84d;
 }
-/* line 43, ../sass/_homepage.scss */
+/* line 52, ../sass/_homepage.scss */
 .primary-overlay .block-weather {
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
@@ -394,75 +507,75 @@ section.col-sm-12 {
   padding: 40px 20px 40px;
   text-align: center;
 }
-/* line 55, ../sass/_homepage.scss */
+/* line 64, ../sass/_homepage.scss */
 .primary-overlay .block-weather .block-title {
   font-size: 2.5em;
   color: #cc7578;
   font-family: "Mystery Quest";
 }
-/* line 60, ../sass/_homepage.scss */
+/* line 69, ../sass/_homepage.scss */
 .primary-overlay .block-weather p {
   position: relative;
   padding: 10px 20px 0px;
-  color: white;
+  color: #cc7578;
   font-family: 'Fredericka the Great';
 }
-/* line 65, ../sass/_homepage.scss */
+/* line 74, ../sass/_homepage.scss */
 .primary-overlay .block-weather p strong {
   font-family: "Mystery Quest";
   font-size: 1.5em;
-  color: mediumseagreen;
+  color: #231427;
   display: block;
 }
 
-/* line 78, ../sass/_homepage.scss */
+/* line 87, ../sass/_homepage.scss */
 body.admin-menu.navbar-is-fixed-top {
   padding-top: 0;
 }
 
-/* line 85, ../sass/_homepage.scss */
+/* line 94, ../sass/_homepage.scss */
 .front header#navbar.navbar-default nav ul.navbar-nav.secondary li.leaf a:link, .front header#navbar.navbar-default nav ul.navbar-nav.secondary li.leaf a:visited, .front header#navbar.navbar-default nav ul.navbar-nav.secondary li.leaf a:active, .front header#navbar.navbar-default nav ul.navbar-nav.secondary li.leaf a:focus {
   color: #fff4f4;
 }
-/* line 88, ../sass/_homepage.scss */
+/* line 97, ../sass/_homepage.scss */
 .front header#navbar.navbar-default nav ul.navbar-nav.secondary li.leaf a:hover {
   color: #97b5bf;
   background-color: transparent;
 }
 
-/* line 96, ../sass/_homepage.scss */
+/* line 105, ../sass/_homepage.scss */
 header#navbar {
   padding-top: 40px;
   background-color: transparent;
 }
-/* line 99, ../sass/_homepage.scss */
+/* line 108, ../sass/_homepage.scss */
 header#navbar nav ul.navbar-nav {
   text-align: center;
   float: none;
 }
-/* line 102, ../sass/_homepage.scss */
+/* line 111, ../sass/_homepage.scss */
 header#navbar nav ul.navbar-nav.secondary {
   margin-right: 15%;
   font-family: 'Mystery Quest';
   font-size: 16px;
 }
-/* line 106, ../sass/_homepage.scss */
+/* line 115, ../sass/_homepage.scss */
 header#navbar nav ul.navbar-nav.secondary li.leaf {
   float: right;
 }
-/* line 108, ../sass/_homepage.scss */
+/* line 117, ../sass/_homepage.scss */
 header#navbar nav ul.navbar-nav.secondary li.leaf a:hover {
   color: #97b5bf;
   background-color: transparent;
 }
-/* line 114, ../sass/_homepage.scss */
+/* line 123, ../sass/_homepage.scss */
 header#navbar nav ul.navbar-nav li {
   position: relative;
   display: inline-block;
   float: none;
 }
 
-/* line 123, ../sass/_homepage.scss */
+/* line 132, ../sass/_homepage.scss */
 #block-views-factfile-block-1 {
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
@@ -478,7 +591,7 @@ header#navbar nav ul.navbar-nav li {
   margin-top: 25%;
   font-family: "Mystery Quest";
 }
-/* line 141, ../sass/_homepage.scss */
+/* line 150, ../sass/_homepage.scss */
 #block-views-factfile-block-1 h2 {
   font-size: 2.5em;
   color: #cc7578;
@@ -488,33 +601,38 @@ header#navbar nav ul.navbar-nav li {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 150, ../sass/_homepage.scss */
+/* line 159, ../sass/_homepage.scss */
 #block-views-factfile-block-1 .view-content {
   background-image: none;
   border: none;
   padding: 10px 10px 0px;
 }
-/* line 155, ../sass/_homepage.scss */
+/* line 164, ../sass/_homepage.scss */
 #block-views-factfile-block-1 ul.pager {
   display: none;
 }
-/* line 159, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-15 .views-field-title {
+/* line 168, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-6 .views-field-title {
   text-align: center;
 }
-/* line 163, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-15 .views-field-title a {
+/* line 172, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-6 .views-field-title a {
   font-size: 1.5em;
-  color: mediumseagreen;
+  color: #231427;
   font-family: 'Mystery Quest';
+  text-decoration: none;
 }
-/* line 169, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-15 nav.slick__arrow {
+/* line 177, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-6 .views-field-title a:hover {
+  color: #c6b84d;
+}
+/* line 182, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-6 nav.slick__arrow {
   padding-bottom: 10px;
   position: initial;
 }
-/* line 174, ../sass/_homepage.scss */
-#block-views-factfile-block-1 #slick-views-factfile-15 nav button {
+/* line 187, ../sass/_homepage.scss */
+#block-views-factfile-block-1 #slick-views-factfile-6 nav button {
   -webkit-transform: initial;
   -moz-transform: initial;
   -ms-transform: initial;
@@ -522,7 +640,7 @@ header#navbar nav ul.navbar-nav li {
   transform: initial;
 }
 
-/* line 190, ../sass/_homepage.scss */
+/* line 203, ../sass/_homepage.scss */
 #block-views-vive-la-revolution-block {
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
@@ -537,7 +655,7 @@ header#navbar nav ul.navbar-nav li {
   padding: 40px 20px 0;
   margin-top: 15%;
 }
-/* line 207, ../sass/_homepage.scss */
+/* line 220, ../sass/_homepage.scss */
 #block-views-vive-la-revolution-block h2 {
   font-size: 2.5em;
   color: #cc7578;
@@ -548,28 +666,32 @@ header#navbar nav ul.navbar-nav li {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 217, ../sass/_homepage.scss */
+/* line 230, ../sass/_homepage.scss */
 #block-views-vive-la-revolution-block ul.pager {
   display: none;
 }
-/* line 221, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-16 .views-field-title {
+/* line 234, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-7 .views-field-title {
   text-align: center;
 }
-/* line 224, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-16 .views-field-title a {
-  padding-top: 20px;
+/* line 237, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-7 .views-field-title a {
   font-size: 1.5em;
-  color: mediumseagreen;
+  color: #231427;
   font-family: 'Mystery Quest';
+  text-decoration: none;
 }
-/* line 231, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-16 nav.slick__arrow {
+/* line 242, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-7 .views-field-title a:hover {
+  color: #c6b84d;
+}
+/* line 247, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-7 nav.slick__arrow {
   padding-bottom: 10px;
   position: initial;
 }
-/* line 235, ../sass/_homepage.scss */
-#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-16 nav button {
+/* line 251, ../sass/_homepage.scss */
+#block-views-vive-la-revolution-block #slick-views-vive-la-revolution-7 nav button {
   -webkit-transform: initial;
   -moz-transform: initial;
   -ms-transform: initial;
@@ -577,6 +699,304 @@ header#navbar nav ul.navbar-nav li {
   transform: initial;
 }
 
+@media only screen and (max-width: 1580px) {
+  /* line 84, ../sass/_media_queries.scss */
+  .col-sm-10 {
+    width: 100%;
+  }
+
+  /* line 88, ../sass/_media_queries.scss */
+  .primary-overlay .block-weather p strong {
+    font-size: 1.25em;
+  }
+
+  /* line 104, ../sass/_media_queries.scss */
+  #block-block-1.poster-title h1 {
+    font-size: 6em;
+  }
+}
+@media only screen and (max-width: 1380px) {
+  /* line 113, ../sass/_media_queries.scss */
+  #block-weather-weather h2.block-title, #block-views-factfile-block-1 h2.block-title, #block-views-vive-la-revolution-block h2.block-title {
+    font-size: 2em;
+  }
+  /* line 117, ../sass/_media_queries.scss */
+  #block-weather-weather #slick-views-factfile-15 .views-field-title a, #block-weather-weather #slick-views-vive-la-revolution-16 .views-field-title a, #block-views-factfile-block-1 #slick-views-factfile-15 .views-field-title a, #block-views-factfile-block-1 #slick-views-vive-la-revolution-16 .views-field-title a, #block-views-vive-la-revolution-block #slick-views-factfile-15 .views-field-title a, #block-views-vive-la-revolution-block #slick-views-vive-la-revolution-16 .views-field-title a {
+    font-size: 1.25em;
+  }
+
+  /* line 124, ../sass/_media_queries.scss */
+  #block-block-1.poster-title h1 {
+    font-size: 5.5em;
+  }
+
+  /* line 129, ../sass/_media_queries.scss */
+  .page-know-your-enemy .carouselOfHorrors#slick-views-factfile-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 133, ../sass/_media_queries.scss */
+  .page-know-your-enemy .carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
+    right: 0%;
+  }
+  /* line 136, ../sass/_media_queries.scss */
+  .page-know-your-enemy .carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
+    left: 0%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  /* line 145, ../sass/_media_queries.scss */
+  #block-weather-weather h2.block-title, #block-views-factfile-block-1 h2.block-title, #block-views-vive-la-revolution-block h2.block-title {
+    font-size: 1.75em;
+  }
+
+  /* line 156, ../sass/_media_queries.scss */
+  #block-block-1.poster-title h1 {
+    font-size: 5em;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* line 165, ../sass/_media_queries.scss */
+  .primary-overlay .block-weather h2.block-title {
+    font-size: 1.75em;
+  }
+  /* line 168, ../sass/_media_queries.scss */
+  .primary-overlay .block-weather p {
+    font-size: 1em;
+    padding: 0;
+  }
+
+  /* line 174, ../sass/_media_queries.scss */
+  .view-factfile div.view-header p {
+    margin: 30px;
+  }
+  /* line 177, ../sass/_media_queries.scss */
+  .view-factfile div.view-content {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  /* line 182, ../sass/_media_queries.scss */
+  div.carouselOfHorrors#slick-views-factfile-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 186, ../sass/_media_queries.scss */
+  div.carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
+    right: 4%;
+  }
+  /* line 189, ../sass/_media_queries.scss */
+  div.carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
+    left: 4%;
+  }
+
+  /* line 194, ../sass/_media_queries.scss */
+  .carouselOfHorrors .node-monster-factfile.node-teaser div.field-name-body {
+    margin-top: 0;
+  }
+
+  /* line 197, ../sass/_media_queries.scss */
+  .carouselOfHorrors .slick-slide img.img-responsive {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+
+  /* line 202, ../sass/_media_queries.scss */
+  .view-vive-la-revolution.chalk-board-font {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 205, ../sass/_media_queries.scss */
+  .view-vive-la-revolution.chalk-board-font .view-header p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 211, ../sass/_media_queries.scss */
+  .node-survival-guides div.field-name-body, .node-about div.field-name-body {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  /* line 214, ../sass/_media_queries.scss */
+  .node-survival-guides div.field-name-body ul li, .node-about div.field-name-body ul li {
+    padding: 5px 20px 20px 60px;
+  }
+
+  /* line 231, ../sass/_media_queries.scss */
+  div.view-monster-map-of-encounters {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 234, ../sass/_media_queries.scss */
+  div.view-monster-map-of-encounters #ip-geoloc-map-of-view-monster_map_of_encounters-page {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  /* line 249, ../sass/_media_queries.scss */
+  .col-sm-3 {
+    width: 30%;
+  }
+
+  /* line 253, ../sass/_media_queries.scss */
+  #block-views-factfile-block-1 h2.block-title, #block-views-vive-la-revolution-block h2.block-title {
+    font-size: 1.5em;
+  }
+  /* line 260, ../sass/_media_queries.scss */
+  #block-views-factfile-block-1 #slick-views-factfile-15 .views-field-title a, #block-views-vive-la-revolution-block #slick-views-factfile-15 .views-field-title a {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-height: 780px) {
+  /* line 279, ../sass/_media_queries.scss */
+  #block-weather-weather {
+    display: none;
+  }
+
+  /* line 283, ../sass/_media_queries.scss */
+  #block-views-factfile-block-1 h2.block-title, #block-views-vive-la-revolution-block h2.block-title {
+    font-size: 2em;
+    padding-bottom: 10px;
+  }
+  /* line 287, ../sass/_media_queries.scss */
+  #block-views-factfile-block-1 .field-content, #block-views-vive-la-revolution-block .field-content {
+    padding-top: 0px;
+  }
+  /* line 294, ../sass/_media_queries.scss */
+  #block-views-factfile-block-1 #slick-views-factfile-15 .views-field-title a, #block-views-vive-la-revolution-block #slick-views-factfile-15 .views-field-title a {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 307, ../sass/_media_queries.scss */
+  #block-block-1 {
+    padding-top: 50px;
+  }
+  /* line 310, ../sass/_media_queries.scss */
+  #block-block-1.poster-title h1 {
+    font-size: 4.5em;
+  }
+
+  /* line 316, ../sass/_media_queries.scss */
+  #block-weather-weather {
+    display: none;
+  }
+
+  /* line 319, ../sass/_media_queries.scss */
+  .field-name-field-b-movie-poster {
+    overflow: hidden;
+  }
+  /* line 321, ../sass/_media_queries.scss */
+  .field-name-field-b-movie-poster img {
+    min-width: 152%;
+  }
+
+  /* line 325, ../sass/_media_queries.scss */
+  .sidebar-overlay {
+    display: none;
+  }
+
+  /* line 328, ../sass/_media_queries.scss */
+  .views-field.views-field-field-home-block-background-imag {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 335, ../sass/_media_queries.scss */
+  h1.page-header {
+    font-size: 3.5em;
+  }
+
+  /* line 339, ../sass/_media_queries.scss */
+  .view-vive-la-revolution .view-header p, .view-about .view-header p, .view-factfile .view-header p, .view-monster-map-of-encounters .view-header p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 343, ../sass/_media_queries.scss */
+  .view-vive-la-revolution #ip-geoloc-map-of-view-monster_map_of_encounters-page, .view-about #ip-geoloc-map-of-view-monster_map_of_encounters-page, .view-factfile #ip-geoloc-map-of-view-monster_map_of_encounters-page, .view-monster-map-of-encounters #ip-geoloc-map-of-view-monster_map_of_encounters-page {
+    border-width: 40px;
+  }
+
+  /* line 349, ../sass/_media_queries.scss */
+  .node-survival-guides div.field-name-body ul li, .node-about div.field-name-body ul li {
+    padding: 5px 20px 20px;
+    font-family: 'Capriola';
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* line 358, ../sass/_media_queries.scss */
+  .node-survival-guides div.field-name-body ul li:before, .node-about div.field-name-body ul li:before {
+    content: ' * ';
+    padding-right: 0.5em;
+    color: #cc7578;
+    font-family: 'Mystery Quest';
+    font-size: 28px;
+    line-height: 24px;
+  }
+
+  /* line 372, ../sass/_media_queries.scss */
+  .page-vive-la-resistance div.chalk-board-font, .page-know-your-enemy div.chalk-board-font, .page-about div.chalk-board-font {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 375, ../sass/_media_queries.scss */
+  .page-vive-la-resistance div.chalk-board-font .views-row-first article.node-teaser, .page-know-your-enemy div.chalk-board-font .views-row-first article.node-teaser, .page-about div.chalk-board-font .views-row-first article.node-teaser {
+    padding-bottom: 120px;
+  }
+  /* line 378, ../sass/_media_queries.scss */
+  .page-vive-la-resistance div.chalk-board-font article.node-survival-guides, .page-vive-la-resistance div.chalk-board-font article.node-about, .page-know-your-enemy div.chalk-board-font article.node-survival-guides, .page-know-your-enemy div.chalk-board-font article.node-about, .page-about div.chalk-board-font article.node-survival-guides, .page-about div.chalk-board-font article.node-about {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 381, ../sass/_media_queries.scss */
+  .page-vive-la-resistance div.chalk-board-font article.node-survival-guides h2 a, .page-vive-la-resistance div.chalk-board-font article.node-about h2 a, .page-know-your-enemy div.chalk-board-font article.node-survival-guides h2 a, .page-know-your-enemy div.chalk-board-font article.node-about h2 a, .page-about div.chalk-board-font article.node-survival-guides h2 a, .page-about div.chalk-board-font article.node-about h2 a {
+    font-size: 2em;
+  }
+  /* line 384, ../sass/_media_queries.scss */
+  .page-vive-la-resistance div.chalk-board-font article.node-survival-guides .field-name-body, .page-vive-la-resistance div.chalk-board-font article.node-about .field-name-body, .page-know-your-enemy div.chalk-board-font article.node-survival-guides .field-name-body, .page-know-your-enemy div.chalk-board-font article.node-about .field-name-body, .page-about div.chalk-board-font article.node-survival-guides .field-name-body, .page-about div.chalk-board-font article.node-about .field-name-body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 387, ../sass/_media_queries.scss */
+  .page-vive-la-resistance div.chalk-board-font article.node-survival-guides .field-name-body p, .page-vive-la-resistance div.chalk-board-font article.node-about .field-name-body p, .page-know-your-enemy div.chalk-board-font article.node-survival-guides .field-name-body p, .page-know-your-enemy div.chalk-board-font article.node-about .field-name-body p, .page-about div.chalk-board-font article.node-survival-guides .field-name-body p, .page-about div.chalk-board-font article.node-about .field-name-body p {
+    padding-top: 10px;
+  }
+
+  /* line 395, ../sass/_media_queries.scss */
+  div.carouselOfHorrors {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 402, ../sass/_media_queries.scss */
+  div.carouselOfHorrors#slick-views-factfile-1 {
+    border-width: 0;
+  }
+  /* line 411, ../sass/_media_queries.scss */
+  div.carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
+    display: none !important;
+  }
+  /* line 414, ../sass/_media_queries.scss */
+  div.carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
+    display: none !important;
+  }
+  /* line 423, ../sass/_media_queries.scss */
+  div.carouselOfHorrors .slick-slide img {
+    margin-bottom: 5px;
+  }
+  /* line 433, ../sass/_media_queries.scss */
+  div.carouselOfHorrors article.node-monster-factfile.node-teaser {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 461, ../sass/_media_queries.scss */
+  div.carouselOfHorrors article.node-monster-factfile.node-teaser .field-name-body {
+    margin-right: 0;
+    padding-top: 15px;
+  }
+}
 /* line 4, ../sass/_carousel_of_horrors.scss */
 #projectorSoundEffect {
   display: none;
@@ -592,27 +1012,24 @@ header#navbar nav ul.navbar-nav li {
   font-size: 30px;
   line-height: 34px;
   color: #000;
-  margin: 30px 10%;
+  margin: 30px 12%;
 }
 /* line 28, ../sass/_carousel_of_horrors.scss */
 .view-factfile .view-content {
-  background-image: url("../../../../../sites/default/files/default_images/Wall_panorama_iPhone_cropped.jpg");
-  background-repeat: round;
-  border-top: 3px solid darkgrey;
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
 
-/* line 46, ../sass/_carousel_of_horrors.scss */
+/* line 51, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 12%;
+  margin-right: 12%;
 }
-/* line 49, ../sass/_carousel_of_horrors.scss */
+/* line 54, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors article.node-monster-factfile {
   padding-bottom: 0;
 }
-/* line 53, ../sass/_carousel_of_horrors.scss */
+/* line 58, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors#slick-views-factfile-1 {
   border-image-source: url("../stylesheets/border-images/projector.png");
   border-image-slice: 229;
@@ -629,21 +1046,29 @@ header#navbar nav ul.navbar-nav li {
   background-color: rgba(255, 255, 255, 0.5);
   margin-top: 30px;
 }
+/* line 97, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors#slick-views-factfile-1 nav button.slick-next {
+  right: -10%;
+}
 /* line 100, ../sass/_carousel_of_horrors.scss */
+.carouselOfHorrors#slick-views-factfile-1 nav button.slick-prev {
+  left: -10%;
+}
+/* line 105, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-dots {
   padding-bottom: 18px;
 }
-/* line 107, ../sass/_carousel_of_horrors.scss */
+/* line 112, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .slick-slide img {
   float: left;
   clear: left;
   margin-right: 20px;
   margin-bottom: 35px;
-  margin-top: 15px;
+  margin-top: 35px;
   margin-left: 15px;
   border: 2px solid darkgrey;
 }
-/* line 133, ../sass/_carousel_of_horrors.scss */
+/* line 138, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser {
   margin-left: 10%;
   margin-right: 10%;
@@ -656,7 +1081,7 @@ header#navbar nav ul.navbar-nav li {
   -o-border-image: url("../../../themes/compostmonster/stylesheets/border-images/border-image-slide-full.png") 50 20 round;
   border-image: url("../../../themes/compostmonster/stylesheets/border-images/border-image-slide-full.png") 50 20 fill round;
 }
-/* line 158, ../sass/_carousel_of_horrors.scss */
+/* line 163, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser header {
   padding-right: 20px;
   padding-bottom: 10px;
@@ -665,18 +1090,18 @@ header#navbar nav ul.navbar-nav li {
   float: right;
   text-align: right;
 }
-/* line 170, ../sass/_carousel_of_horrors.scss */
+/* line 175, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser header h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: 'Mystery Quest';
 }
-/* line 176, ../sass/_carousel_of_horrors.scss */
+/* line 181, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-top img, .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-field-filmstrip-bottom img {
   margin-left: 0;
 }
-/* line 180, ../sass/_carousel_of_horrors.scss */
+/* line 185, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser .field-name-body {
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 1%;
   margin-right: 20px;
   text-align: center;
@@ -685,53 +1110,54 @@ header#navbar nav ul.navbar-nav li {
   color: #000;
   font-size: 20px;
 }
-/* line 197, ../sass/_carousel_of_horrors.scss */
+/* line 202, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li {
   display: block;
   clear: right;
   text-align: center;
   padding-bottom: 20px;
 }
-/* line 207, ../sass/_carousel_of_horrors.scss */
+/* line 212, ../sass/_carousel_of_horrors.scss */
 .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-add, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment_forbidden, .carouselOfHorrors .node-monster-factfile.node-teaser footer .list-inline li.comment-comments {
   display: none;
 }
 
-/* line 218, ../sass/_carousel_of_horrors.scss */
+/* line 223, ../sass/_carousel_of_horrors.scss */
 .page-comment .region-content {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5px;
 }
-/* line 225, ../sass/_carousel_of_horrors.scss */
+/* line 230, ../sass/_carousel_of_horrors.scss */
 .page-comment .comment .list-inline {
   clear: left;
   padding-left: 10px;
   padding-bottom: 5px;
 }
-/* line 230, ../sass/_carousel_of_horrors.scss */
+/* line 235, ../sass/_carousel_of_horrors.scss */
 .page-comment .comment .submitted {
   padding-top: 10px;
 }
-/* line 233, ../sass/_carousel_of_horrors.scss */
+/* line 238, ../sass/_carousel_of_horrors.scss */
 .page-comment .comment h3 .permalink {
   display: none;
 }
-/* line 236, ../sass/_carousel_of_horrors.scss */
+/* line 241, ../sass/_carousel_of_horrors.scss */
 .page-comment .comment p {
   color: black;
 }
 
-/* line 248, ../sass/_carousel_of_horrors.scss */
+/* line 253, ../sass/_carousel_of_horrors.scss */
 article.node-monster-factfile, article.node-survival-guides article.node-monsters {
   padding-bottom: 15px;
 }
 
-/* line 255, ../sass/_carousel_of_horrors.scss */
+/* line 260, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile .field-name-field-image-factfile img {
   margin-left: auto;
   margin-right: auto;
+  width: 900px;
   border-image-source: url("../stylesheets/border-images/MonsterMapBorderBlue.png");
   border-image-slice: 229;
   border-style: solid;
@@ -742,7 +1168,7 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   -o-border-image: url("../stylesheets/border-images/MonsterMapBorderBlue.png") 229 229 round;
   border-image: url("../stylesheets/border-images/MonsterMapBorderBlue.png") 229 229 fill round;
 }
-/* line 263, ../sass/_carousel_of_horrors.scss */
+/* line 269, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile .field-name-body {
   padding-top: 30px;
   margin-left: auto;
@@ -751,7 +1177,7 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   height: auto;
 }
 
-/* line 273, ../sass/_carousel_of_horrors.scss */
+/* line 279, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile .field-label, .node-survival-guides .field-label, .node-monsters .field-label {
   font-family: "Fredericka the Great";
   font-size: 1.5em;
@@ -760,17 +1186,17 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   padding-bottom: 5px;
   padding-top: 15px;
 }
-/* line 281, ../sass/_carousel_of_horrors.scss */
+/* line 287, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile header, .node-survival-guides header, .node-monsters header {
   text-align: center;
 }
-/* line 283, ../sass/_carousel_of_horrors.scss */
+/* line 289, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile header span.submitted, .node-survival-guides header span.submitted, .node-monsters header span.submitted {
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
 }
-/* line 289, ../sass/_carousel_of_horrors.scss */
+/* line 295, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments, .node-survival-guides #comments, .node-monsters #comments {
   width: 60%;
   margin-left: auto;
@@ -780,7 +1206,7 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   padding-bottom: 30px;
   color: #000;
 }
-/* line 297, ../sass/_carousel_of_horrors.scss */
+/* line 303, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments h2, .node-survival-guides #comments h2, .node-monsters #comments h2 {
   font-size: 1.5em;
   font-family: "Fredericka the Great";
@@ -788,29 +1214,29 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 304, ../sass/_carousel_of_horrors.scss */
+/* line 310, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .comment, .node-survival-guides #comments .comment, .node-monsters #comments .comment {
   background-color: rgba(100, 100, 100, 0.1);
   text-align: left;
   padding-bottom: 5px;
   padding-left: 10px;
 }
-/* line 310, ../sass/_carousel_of_horrors.scss */
+/* line 316, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .comment .list-inline, .node-survival-guides #comments .comment .list-inline, .node-monsters #comments .comment .list-inline {
   clear: left;
   padding-left: 10px;
   padding-bottom: 10px;
 }
-/* line 318, ../sass/_carousel_of_horrors.scss */
+/* line 324, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .comment h3 .permalink, .node-survival-guides #comments .comment h3 .permalink, .node-monsters #comments .comment h3 .permalink {
   display: none;
 }
-/* line 321, ../sass/_carousel_of_horrors.scss */
+/* line 327, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .comment p, .node-survival-guides #comments .comment p, .node-monsters #comments .comment p {
   color: black;
   padding-bottom: 5px;
 }
-/* line 325, ../sass/_carousel_of_horrors.scss */
+/* line 331, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .comment.well, .node-survival-guides #comments .comment.well, .node-monsters #comments .comment.well {
   margin-top: 10px;
   margin-bottom: 0;
@@ -818,26 +1244,26 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 335, ../sass/_carousel_of_horrors.scss */
+/* line 341, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .indented .comment, .node-survival-guides #comments .indented .comment, .node-monsters #comments .indented .comment {
   background-color: rgba(200, 200, 200, 0.1);
   text-align: right;
   padding-top: 5px;
   padding-right: 10px;
 }
-/* line 340, ../sass/_carousel_of_horrors.scss */
+/* line 346, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .indented .comment p, .node-survival-guides #comments .indented .comment p, .node-monsters #comments .indented .comment p {
   width: 50%;
   float: right;
   padding-bottom: 5px;
   color: #2d6987;
 }
-/* line 346, ../sass/_carousel_of_horrors.scss */
+/* line 352, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .indented .comment .list-inline, .node-survival-guides #comments .indented .comment .list-inline, .node-monsters #comments .indented .comment .list-inline {
   clear: right;
   padding-bottom: 10px;
 }
-/* line 355, ../sass/_carousel_of_horrors.scss */
+/* line 361, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .indented .comment.well, .node-survival-guides #comments .indented .comment.well, .node-monsters #comments .indented .comment.well {
   margin-bottom: 0;
   margin-top: 0px;
@@ -845,40 +1271,40 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 362, ../sass/_carousel_of_horrors.scss */
+/* line 368, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile #comments .indented .comment .new, .node-survival-guides #comments .indented .comment .new, .node-monsters #comments .indented .comment .new {
   color: orange;
   font-family: "Fredericka the Great";
 }
-/* line 369, ../sass/_carousel_of_horrors.scss */
+/* line 375, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile footer, .node-survival-guides footer, .node-monsters footer {
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 5%;
   clear: both;
 }
-/* line 374, ../sass/_carousel_of_horrors.scss */
+/* line 380, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile footer .list-inline, .node-survival-guides footer .list-inline, .node-monsters footer .list-inline {
   margin-left: 0;
   border-bottom: 1px solid black;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-/* line 382, ../sass/_carousel_of_horrors.scss */
+/* line 388, ../sass/_carousel_of_horrors.scss */
 .node-type-monster-factfile footer .field-name-field-tags, .node-survival-guides footer .field-name-field-tags, .node-monsters footer .field-name-field-tags {
   display: inline-block;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-/* line 390, ../sass/_carousel_of_horrors.scss */
+/* line 396, ../sass/_carousel_of_horrors.scss */
 .upper-film-reel-top {
   height: 10px;
   clear: both;
   display: block;
 }
 
-/* line 398, ../sass/_carousel_of_horrors.scss */
+/* line 404, ../sass/_carousel_of_horrors.scss */
 .lower-film-reel {
   background-image: url("/sites/default/files/site-design-images/2000x100px-filmstrip-bottom-alt.png");
   height: 100px;
@@ -886,29 +1312,30 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   display: block;
 }
 
-/* line 406, ../sass/_carousel_of_horrors.scss */
+/* line 412, ../sass/_carousel_of_horrors.scss */
 .lower-film-reel-beneath {
   height: 100%;
   background-color: black;
 }
 
 /* line 4, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font, .page-know-your-enemy .chalk-board-font {
+.page-vive-la-resistance .chalk-board-font, .page-know-your-enemy .chalk-board-font, .page-about .chalk-board-font {
   margin-top: 2em;
   margin-bottom: 1em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
 }
-/* line 10, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font .view-header p, .page-know-your-enemy .chalk-board-font .view-header p {
+/* line 11, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font .view-header p, .page-know-your-enemy .chalk-board-font .view-header p, .page-about .chalk-board-font .view-header p {
   font-family: "Fredericka the Great";
   font-size: 30px;
   line-height: 34px;
   color: #000;
-  margin: 30px 60px;
+  margin: 30px;
 }
-/* line 18, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font .views-row-first article.node-teaser, .page-know-your-enemy .chalk-board-font .views-row-first article.node-teaser {
+/* line 19, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font .views-row-first article.node-teaser, .page-know-your-enemy .chalk-board-font .views-row-first article.node-teaser, .page-about .chalk-board-font .views-row-first article.node-teaser {
   padding-bottom: 80px;
   padding-top: 50px;
   border-image-source: url("../stylesheets/border-images/survival-guide-teaser-first.png");
@@ -921,8 +1348,8 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   -o-border-image: url("../stylesheets/border-images/survival-guide-teaser-first.png") 85 75 round;
   border-image: url("../stylesheets/border-images/survival-guide-teaser-first.png") 85 75 fill round;
 }
-/* line 21, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font .views-row-last article.node-teaser, .page-know-your-enemy .chalk-board-font .views-row-last article.node-teaser {
+/* line 22, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font .views-row-last article.node-teaser, .page-know-your-enemy .chalk-board-font .views-row-last article.node-teaser, .page-about .chalk-board-font .views-row-last article.node-teaser {
   padding-bottom: 50px;
   padding-top: 50px;
   border-image-source: url("../stylesheets/border-images/survival-guide-teaser-last.png");
@@ -935,16 +1362,16 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   -o-border-image: url("../stylesheets/border-images/survival-guide-teaser-last.png") 85 75 round;
   border-image: url("../stylesheets/border-images/survival-guide-teaser-last.png") 85 75 fill round;
 }
-/* line 25, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article, .page-know-your-enemy .chalk-board-font article {
+/* line 26, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article, .page-know-your-enemy .chalk-board-font article, .page-about .chalk-board-font article {
   background-repeat: round;
   padding-top: 2em;
   padding-bottom: 1em;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
-/* line 34, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article.node-teaser, .page-know-your-enemy .chalk-board-font article.node-teaser {
+/* line 35, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article.node-teaser, .page-know-your-enemy .chalk-board-font article.node-teaser, .page-about .chalk-board-font article.node-teaser {
   padding-top: 70px;
   padding-bottom: 50px;
   border-image-source: url("../stylesheets/border-images/survival-guide-teaser.png");
@@ -956,56 +1383,83 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   -webkit-border-image: url("../stylesheets/border-images/survival-guide-teaser.png") 85 75 round;
   -o-border-image: url("../stylesheets/border-images/survival-guide-teaser.png") 85 75 round;
   border-image: url("../stylesheets/border-images/survival-guide-teaser.png") 85 75 fill round;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  max-width: 1100px;
 }
-/* line 41, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article h2 a, .page-know-your-enemy .chalk-board-font article h2 a {
+/* line 44, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article h2 a, .page-know-your-enemy .chalk-board-font article h2 a, .page-about .chalk-board-font article h2 a {
   font-family: "Mystery Quest";
   font-size: 3em;
   color: #97b5bf;
   text-decoration: none;
 }
-/* line 49, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article h2 a:hover, .page-know-your-enemy .chalk-board-font article h2 a:hover {
+/* line 52, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article h2 a:hover, .page-know-your-enemy .chalk-board-font article h2 a:hover, .page-about .chalk-board-font article h2 a:hover {
   color: #c7b950;
 }
-/* line 53, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article p, .page-know-your-enemy .chalk-board-font article p {
+/* line 56, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article p, .page-know-your-enemy .chalk-board-font article p, .page-about .chalk-board-font article p {
   font-family: "Capriola";
   font-size: 20px;
   line-height: 24px;
   color: #000;
   padding: 10px 10px;
 }
-/* line 62, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article footer .list-inline li, .page-know-your-enemy .chalk-board-font article footer .list-inline li {
+/* line 65, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li, .page-know-your-enemy .chalk-board-font article footer .list-inline li, .page-about .chalk-board-font article footer .list-inline li {
   font-family: "Fredericka the Great";
 }
-/* line 64, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article footer .list-inline li.node-readmore a, .page-know-your-enemy .chalk-board-font article footer .list-inline li.node-readmore a {
+/* line 67, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li.node-readmore a, .page-know-your-enemy .chalk-board-font article footer .list-inline li.node-readmore a, .page-about .chalk-board-font article footer .list-inline li.node-readmore a {
   padding: 10px;
   font-size: 24px;
+  color: #cc7578;
 }
-/* line 68, ../sass/_vive_la_resistance.scss */
-.page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment-add, .page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment_forbidden, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment-add, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment_forbidden {
+/* line 71, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li.node-readmore a:hover, .page-vive-la-resistance .chalk-board-font article footer .list-inline li.node-readmore a:focus, .page-know-your-enemy .chalk-board-font article footer .list-inline li.node-readmore a:hover, .page-know-your-enemy .chalk-board-font article footer .list-inline li.node-readmore a:focus, .page-about .chalk-board-font article footer .list-inline li.node-readmore a:hover, .page-about .chalk-board-font article footer .list-inline li.node-readmore a:focus {
+  text-decoration: none;
+  color: #c6b84d;
+}
+/* line 76, ../sass/_vive_la_resistance.scss */
+.page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment-add, .page-vive-la-resistance .chalk-board-font article footer .list-inline li.comment_forbidden, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment-add, .page-know-your-enemy .chalk-board-font article footer .list-inline li.comment_forbidden, .page-about .chalk-board-font article footer .list-inline li.comment-add, .page-about .chalk-board-font article footer .list-inline li.comment_forbidden {
   display: none;
 }
 
-/* line 80, ../sass/_vive_la_resistance.scss */
-.node-survival-guides.node-teaser .field-name-body {
-  padding-top: 10px;
-}
 /* line 87, ../sass/_vive_la_resistance.scss */
-.node-survival-guides footer {
-  padding-top: 2%;
+.node-survival-guides.node-teaser header, .node-about.node-teaser header {
+  text-align: center;
 }
 /* line 89, ../sass/_vive_la_resistance.scss */
-.node-survival-guides footer ul.list-inline {
+.node-survival-guides.node-teaser header .submitted, .node-about.node-teaser header .submitted {
+  display: none;
+}
+/* line 92, ../sass/_vive_la_resistance.scss */
+.node-survival-guides.node-teaser header h2 a, .node-about.node-teaser header h2 a {
+  font-family: "Mystery Quest";
+  font-size: 3em;
+  color: #97b5bf;
+  text-decoration: none;
+}
+/* line 99, ../sass/_vive_la_resistance.scss */
+.node-survival-guides.node-teaser header h2 a:hover, .node-about.node-teaser header h2 a:hover {
+  color: #c7b950;
+}
+/* line 105, ../sass/_vive_la_resistance.scss */
+.node-survival-guides.node-teaser .field-name-body, .node-about.node-teaser .field-name-body {
+  padding-top: 10px;
+}
+/* line 112, ../sass/_vive_la_resistance.scss */
+.node-survival-guides footer, .node-about footer {
+  padding-top: 2%;
+}
+/* line 114, ../sass/_vive_la_resistance.scss */
+.node-survival-guides footer ul.list-inline, .node-about footer ul.list-inline {
   border-bottom: none;
 }
-/* line 95, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-field-article-image img {
+/* line 120, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-field-article-image img, .node-survival-guides .field-name-field-featured-image img, .node-about .field-name-field-article-image img, .node-about .field-name-field-featured-image img {
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
@@ -1021,26 +1475,26 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   border-width: 30px;
   padding-top: 55px;
 }
-/* line 103, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body {
+/* line 128, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body, .node-about .field-name-body {
   color: #000;
   margin-left: 5em;
   margin-right: 5em;
   padding-top: 30px;
   font-size: 20px;
   font-family: "Fredericka the Great";
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 12%;
+  margin-right: 12%;
 }
-/* line 112, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body ul li {
+/* line 137, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body ul li, .node-about .field-name-body ul li {
   padding: 5px 120px 20px;
   font-family: 'Capriola';
   font-size: 20px;
   line-height: 24px;
 }
-/* line 121, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body ul li:before {
+/* line 146, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body ul li:before, .node-about .field-name-body ul li:before {
   content: ' * ';
   padding-right: 0.5em;
   color: #cc7578;
@@ -1048,8 +1502,8 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   font-size: 36px;
   line-height: 24px;
 }
-/* line 132, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body h3 strong {
+/* line 157, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body h3 strong, .node-about .field-name-body h3 strong {
   font-size: 2em;
   font-family: 'Mystery Quest';
   color: #cc7578;
@@ -1057,13 +1511,13 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   padding-bottom: 1em;
   display: block;
 }
-/* line 141, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body p {
+/* line 166, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body p, .node-about .field-name-body p {
   padding: 20px;
   line-height: 26px;
 }
-/* line 146, ../sass/_vive_la_resistance.scss */
-.node-survival-guides .field-name-body p strong {
+/* line 171, ../sass/_vive_la_resistance.scss */
+.node-survival-guides .field-name-body p strong, .node-about .field-name-body p strong {
   color: #cc7578;
   font-weight: 500;
 }
@@ -1095,42 +1549,43 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   border-radius: 35px;
   border: 2px solid #cc7578;
   color: deeppink;
+  width: 99%;
 }
-/* line 17, ../sass/_google-maps.scss */
+/* line 18, ../sass/_google-maps.scss */
 #ip-geoloc-map-of-view-map_test_view-page .balloon a, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon a {
   font-family: "Fredericka the Great";
   color: white;
   font-size: 1.5em;
   display: block;
 }
-/* line 22, ../sass/_google-maps.scss */
+/* line 23, ../sass/_google-maps.scss */
 #ip-geoloc-map-of-view-map_test_view-page .balloon a img, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon a img {
   margin: auto;
 }
-/* line 27, ../sass/_google-maps.scss */
+/* line 28, ../sass/_google-maps.scss */
 #ip-geoloc-map-of-view-map_test_view-page .balloon .street-block .thoroughfare, #ip-geoloc-map-of-view-map_test_view-page .balloon .street-block .premise, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon .street-block .thoroughfare, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon .street-block .premise {
   color: white;
 }
-/* line 31, ../sass/_google-maps.scss */
+/* line 32, ../sass/_google-maps.scss */
 #ip-geoloc-map-of-view-map_test_view-page .balloon .addressfield-container, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon .addressfield-container {
   color: white;
 }
-/* line 34, ../sass/_google-maps.scss */
+/* line 35, ../sass/_google-maps.scss */
 #ip-geoloc-map-of-view-map_test_view-page .balloon .country, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon .country {
   color: white;
 }
-/* line 37, ../sass/_google-maps.scss */
+/* line 38, ../sass/_google-maps.scss */
 #ip-geoloc-map-of-view-map_test_view-page .balloon .post-code, #ip-geoloc-map-of-view-monster_map_of_encounters-page .balloon .post-code {
   color: white;
 }
 
-/* line 43, ../sass/_google-maps.scss */
+/* line 44, ../sass/_google-maps.scss */
 .view-monster-map-of-encounters {
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 12%;
+  margin-right: 12%;
 }
-/* line 47, ../sass/_google-maps.scss */
+/* line 48, ../sass/_google-maps.scss */
 .view-monster-map-of-encounters .view-header {
   font-family: "Fredericka the Great";
   color: #000;
@@ -1140,35 +1595,47 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   margin-top: 30px;
 }
 /* line 55, ../sass/_google-maps.scss */
+.view-monster-map-of-encounters .view-header span a {
+  color: #97b5bf;
+}
+/* line 57, ../sass/_google-maps.scss */
+.view-monster-map-of-encounters .view-header span a:hover {
+  color: #c6b84d;
+  text-decoration: none;
+}
+/* line 63, ../sass/_google-maps.scss */
 .view-monster-map-of-encounters p {
   font-family: "Fredericka the Great";
   font-size: 30px;
   line-height: 34px;
 }
 
-/* line 61, ../sass/_google-maps.scss */
+/* line 69, ../sass/_google-maps.scss */
 .node-type-monsters {
   margin-bottom: 20px;
 }
 
-/* line 65, ../sass/_google-maps.scss */
+/* line 73, ../sass/_google-maps.scss */
 #monsterReport {
-  background-image: url("../stylesheets/border-images/wantedPoster.png");
+  background-image: url("../stylesheets/border-images/incident-report.png");
   background-repeat: round;
   overflow-x: visible;
   overflow-y: hidden;
   max-width: 1000px;
-  margin: auto;
-  padding: 50px 30px 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 50px 50px 75px 105px;
 }
 
-/* line 74, ../sass/_google-maps.scss */
+/* line 85, ../sass/_google-maps.scss */
 .node-monsters {
   color: #000;
   margin-right: 10%;
   margin-left: 10%;
 }
-/* line 76, ../sass/_google-maps.scss */
+/* line 87, ../sass/_google-maps.scss */
 .node-monsters .field-name-field-monster-image img {
   border-image-source: url("../stylesheets/border-images/MonsterMapBorder.png");
   border-image-slice: 229;
@@ -1181,66 +1648,64 @@ article.node-monster-factfile, article.node-survival-guides article.node-monster
   border-image: url("../stylesheets/border-images/MonsterMapBorder.png") 229 229 fill round;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
-  height: 460px;
+  width: 1000px;
+  height: 800px;
 }
-/* line 88, ../sass/_google-maps.scss */
+/* line 99, ../sass/_google-maps.scss */
 .node-monsters .field-label {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 92, ../sass/_google-maps.scss */
+/* line 103, ../sass/_google-maps.scss */
 .node-monsters p {
   font-size: 20px;
   margin: 10px 10% 3%;
 }
-/* line 98, ../sass/_google-maps.scss */
+/* line 109, ../sass/_google-maps.scss */
 .node-monsters .field-name-body .field-label {
   margin-left: 10%;
   margin-top: 3%;
 }
-/* line 103, ../sass/_google-maps.scss */
+/* line 114, ../sass/_google-maps.scss */
 .node-monsters .field-name-monster-aggression-level, .node-monsters .field-name-field-geolocation {
   display: inline-block;
-  margin-right: 10%;
   float: right;
   text-align: right;
   clear: right;
 }
-/* line 113, ../sass/_google-maps.scss */
+/* line 124, ../sass/_google-maps.scss */
 .node-monsters .field-name-monster-witnessed-by {
   display: inline-block;
-  margin-right: 10%;
   float: right;
   text-align: right;
   clear: right;
 }
-/* line 120, ../sass/_google-maps.scss */
+/* line 131, ../sass/_google-maps.scss */
 .node-monsters .field-name-field-location-spotted {
   float: left;
   margin-left: 10%;
 }
-/* line 123, ../sass/_google-maps.scss */
+/* line 134, ../sass/_google-maps.scss */
 .node-monsters .field-name-field-location-spotted .field-items {
   font-size: 30px;
   font-weight: bold;
 }
-/* line 129, ../sass/_google-maps.scss */
+/* line 140, ../sass/_google-maps.scss */
 .node-monsters .field-name-monster-aggression-level .field-items, .node-monsters .field-name-monster-witnessed-by .field-items {
   font-size: 30px;
   font-weight: bold;
 }
-/* line 135, ../sass/_google-maps.scss */
+/* line 146, ../sass/_google-maps.scss */
 .node-monsters footer .list-inline {
   border-bottom: none;
 }
 
-/* line 141, ../sass/_google-maps.scss */
+/* line 152, ../sass/_google-maps.scss */
 footer ul li.comment-add {
   display: none;
 }
 
-/* line 146, ../sass/_google-maps.scss */
+/* line 157, ../sass/_google-maps.scss */
 #comments {
   width: 60%;
   margin-left: auto;
@@ -1248,7 +1713,7 @@ footer ul li.comment-add {
   padding-top: 5px;
   clear: both;
 }
-/* line 152, ../sass/_google-maps.scss */
+/* line 163, ../sass/_google-maps.scss */
 #comments h2 {
   font-size: 1.5em;
   font-family: "Fredericka the Great";
@@ -1256,29 +1721,29 @@ footer ul li.comment-add {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 159, ../sass/_google-maps.scss */
+/* line 170, ../sass/_google-maps.scss */
 #comments .comment {
   background-color: rgba(100, 100, 100, 0.1);
   text-align: left;
   padding-bottom: 5px;
   padding-left: 10px;
 }
-/* line 165, ../sass/_google-maps.scss */
+/* line 176, ../sass/_google-maps.scss */
 #comments .comment .list-inline {
   clear: left;
   padding-left: 10px;
   padding-bottom: 10px;
 }
-/* line 173, ../sass/_google-maps.scss */
+/* line 184, ../sass/_google-maps.scss */
 #comments .comment h3 .permalink {
   display: none;
 }
-/* line 176, ../sass/_google-maps.scss */
+/* line 187, ../sass/_google-maps.scss */
 #comments .comment p {
   color: black;
   padding-bottom: 5px;
 }
-/* line 180, ../sass/_google-maps.scss */
+/* line 191, ../sass/_google-maps.scss */
 #comments .comment.well {
   margin-top: 10px;
   margin-bottom: 0;
@@ -1286,26 +1751,26 @@ footer ul li.comment-add {
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 190, ../sass/_google-maps.scss */
+/* line 201, ../sass/_google-maps.scss */
 #comments .indented .comment {
   background-color: rgba(200, 200, 200, 0.1);
   text-align: right;
   padding-top: 5px;
   padding-right: 10px;
 }
-/* line 195, ../sass/_google-maps.scss */
+/* line 206, ../sass/_google-maps.scss */
 #comments .indented .comment p {
   width: 50%;
   float: right;
   padding-bottom: 5px;
   color: #2d6987;
 }
-/* line 201, ../sass/_google-maps.scss */
+/* line 212, ../sass/_google-maps.scss */
 #comments .indented .comment .list-inline {
   clear: right;
   padding-bottom: 10px;
 }
-/* line 210, ../sass/_google-maps.scss */
+/* line 221, ../sass/_google-maps.scss */
 #comments .indented .comment.well {
   margin-bottom: 0;
   margin-top: 0px;
@@ -1313,7 +1778,7 @@ footer ul li.comment-add {
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 217, ../sass/_google-maps.scss */
+/* line 228, ../sass/_google-maps.scss */
 #comments .indented .comment .new {
   color: orange;
   font-family: "Fredericka the Great";
@@ -1371,4 +1836,22 @@ footer ul li.comment-add {
 /* line 40, ../sass/_add_new_monster.scss */
 .add_new_monsters .field-name-body fieldset.filter-wrapper {
   margin-top: 5px;
+}
+
+/* line 2, ../sass/_about.scss */
+.view-about .view-header {
+  text-align: center;
+}
+/* line 4, ../sass/_about.scss */
+.view-about .view-header p {
+  font-family: "Fredericka the Great";
+  font-size: 30px;
+  line-height: 34px;
+  color: #000;
+  margin: 30px 12%;
+}
+/* line 12, ../sass/_about.scss */
+.view-about .view-content {
+  padding-top: 10px;
+  padding-bottom: 25px;
 }

@@ -163,10 +163,18 @@
         <?php endif; ?>
 
     </div>
+    <?php if (!empty($page['footer'])): ?>
+        <footer class="footer col-sm-10 <?php
+        if($user->uid !== 0) {print 'display-none ';}
+        print $container_class; ?>">
+            <div>
+                <div class="col-sm-5 col-sm-offset-1" >
+                    <?php print render($page['footer']['user_login']); ?>
+                </div>
+                <div class="col-sm-5">
+                    <?php print render($page['footer']['views_about-block_1']); ?>
+                </div>
+        </footer>
+    <?php endif; ?>
 </div>
 
-<?php if (!empty($page['footer'])): ?>
-    <footer class="footer <?php print $container_class; ?>">
-        <?php print render($page['footer']); ?>
-    </footer>
-<?php endif; ?>

@@ -14,6 +14,7 @@
         border-radius: 35px;
         border: 2px solid $darkerpinkskin;
         color: deeppink;
+        width: 99%;
         a {
             font-family: $fredericka;
             color: white;
@@ -42,8 +43,8 @@
 
 .view-monster-map-of-encounters {
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 12%;
+    margin-right: 12%;
     .view-header {
         font-family: $fredericka;
         color: #000;
@@ -51,6 +52,13 @@
         margin-left: 30px;
         margin-right: 30px;
         margin-top: 30px;
+        span a {
+            color: $seablue;
+            &:hover {
+                color: $vegetationgreen;
+                text-decoration: none;
+            }
+        }
     }
     p {
         font-family: $fredericka;
@@ -63,12 +71,15 @@
 }
 
 #monsterReport {
-    @include border-image-wanted-poster;
+    @include background-image-incident-report;
     overflow-x: visible;
     overflow-y: hidden;
     max-width: 1000px;
-    margin: auto;
-    padding: 50px 30px 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 50px 50px 75px 105px;
 }
 
 .node-monsters {
@@ -77,8 +88,8 @@
             @include border-image-monster-map;
             margin-left: auto;
             margin-right: auto;
-            width: 600px;
-            height: 460px;
+            width: 1000px;
+            height: 800px;
         }
     }
         //padding: 7% 3% 10%;
@@ -102,7 +113,7 @@
         }
         .field-name-monster-aggression-level, .field-name-field-geolocation {
             display: inline-block;
-            margin-right: 10%;
+            //margin-right: 10%;
             float: right;
             text-align: right;
             clear: right;
@@ -112,7 +123,7 @@
         }
         .field-name-monster-witnessed-by {
             display: inline-block;
-            margin-right: 10%;
+            //margin-right: 10%;
             float: right;
             text-align: right;
             clear: right;
