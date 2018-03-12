@@ -3,7 +3,9 @@
     <extensionMap>
       <mapping ext="vue" type="HTML" />
       <mapping ext="install" type="PHP" />
+      <mapping pattern="Procfile" type="PLAIN_TEXT" />
       <mapping pattern="_media-queries.scss" type="PLAIN_TEXT" />
+      <mapping pattern="ProcFile" type="PLAIN_TEXT" />
       <mapping pattern="_media-queries" type="SCSS" />
     </extensionMap>
   </component>
