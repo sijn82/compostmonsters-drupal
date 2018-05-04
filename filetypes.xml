@@ -5,8 +5,10 @@
       <mapping ext="install" type="PHP" />
       <mapping pattern="Procfile" type="PLAIN_TEXT" />
       <mapping pattern="_media-queries.scss" type="PLAIN_TEXT" />
+      <mapping pattern=".env" type="PLAIN_TEXT" />
       <mapping pattern="ProcFile" type="PLAIN_TEXT" />
       <mapping pattern="_media-queries" type="SCSS" />
+      <removed_mapping ext="vue" type="Vue.js file" />
     </extensionMap>
   </component>
 </application>
